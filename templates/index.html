@@ -30,7 +30,11 @@
             document.getElementById("userInput").scrollIntoView({block:'start', behaviour:'smooth'});
 
             $.get("/get", {userMessage: userText}).done((data) =>{
-                var botHTML = `<p class="botText">Bot: <span>${data}</span></p>`;
+                let audio
+                audio.src = "data:audio/mpeg;base64," + data
+                let audio2 = new Audio(audio);
+                audio.play()
+                var botHTML = `<p class="botText">Bot: <span>${'ff'}</span></p>`;
                 $("#chatbox").append(botHTML);
             })
         }
