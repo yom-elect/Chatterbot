@@ -28,10 +28,16 @@
             $('#textInput').val("");
             $("#chatbox").append(userHTML);
             document.getElementById("userInput").scrollIntoView({block:'start', behaviour:'smooth'});
-
             $.get("/get", {userMessage: userText}).done((data) =>{
                 var botHTML = `<p class="botText">Bot: <span>${data}</span></p>`;
                 $("#chatbox").append(botHTML);
+                if ('speechSynthesis' in window) {
+                    let synth = window.speechSynthesis;
+                    const voices = synth.getVoices();
+                    let msg = new SpeechSynthesisUtterance(data);
+                    msg.voice = voices[1];
+                    synth.speak(msg);
+                }
             })
         }
 
