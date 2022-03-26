@@ -46,3 +46,5 @@ pipe_lr.predict([ex1])
 pipeline_file = open("emotion_classifier_model_1.pkl","wb")
 joblib.dump(pipe_lr,pipeline_file)
 pipeline_file.close()
+
+#pipe_lr =joblib.load("emotion_classifier_model_1.pkl")
