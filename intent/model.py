@@ -6,6 +6,7 @@ stemmer = LancasterStemmer()
 import numpy as np
 
 import intent.conversations_model as cm
+from emotion.emotion_model import predict_emotion
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
@@ -33,7 +34,8 @@ def get_bot_response(userInput):
         for tg in data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
-
+        # print(predict_emotion(userInput))
         return random.choice(responses)
     else:
+        # print(predict_emotion(userInput), "=================")
         return "I didnt get that , try again"      

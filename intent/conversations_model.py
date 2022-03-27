@@ -64,7 +64,7 @@ def process_intent_data():
         training = np.array(training)
         output = np.array(output)
 
-        with open("data.pickle", "wb") as f:
+        with open("intent/data.pickle", "wb") as f:
             pickle.dump((words, labels, training, output), f)
         
     return {"words": words, "labels": labels, "training" : training, "output": output}

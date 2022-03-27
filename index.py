@@ -2,7 +2,6 @@ import os
 from flask import Flask, render_template, request, Response
 from flask.helpers import safe_join
 
-
 from intent.model import get_bot_response
 
 
