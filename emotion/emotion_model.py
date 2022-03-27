@@ -75,7 +75,6 @@ def get_nv_prediction_proba(model, docx):
     results = model.predict_proba(vect)
     return np.max(results)
 
-
 def predict_linear_emotions(model, docx):
 	results = model.predict([docx])
 	return results[0]
