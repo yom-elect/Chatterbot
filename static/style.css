@@ -54,3 +54,10 @@ h1{
     text-align: center;
     color: green;
 }
+
+#video{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 50px;
+}
