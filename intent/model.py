@@ -35,7 +35,7 @@ def get_bot_response(userInput):
             if tg['tag'] == tag:
                 responses = tg['responses']
         # print(predict_emotion(userInput))
-        return random.choice(responses)
+        return random.choice(responses) + predict_emotion(userInput)
     else:
         # print(predict_emotion(userInput), "=================")
         return "I didnt get that , try again"      
