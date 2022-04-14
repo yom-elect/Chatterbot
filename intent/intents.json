@@ -139,6 +139,417 @@
         "patterns": ["yea", "Yes", "yep", "yeah", "okay", "ok", "certainly", "sure", "absolutely", "by all means","of course", "very well", "all right", "alright", "affirmative", "no"],
         "responses": ["playing..."],
         "context_set": ""
-        }           
+        },
+        {
+        "tag": "feeling_question_anger",
+        "patterns": [
+                "I'm angry", 
+                "I'm not just feeling myself", 
+                "I feel agitated", 
+                "I'm so mad right now", 
+                "I can't help myself", 
+                "I'm losing it", 
+                "I'm frustrated", 
+                "I'm pissed", 
+                "Getting my shit hot", 
+                "Upset", 
+                "I'm nursing a grudge",
+                "Pissed off", 
+                "Burned up", 
+                "Be in a black mood", 
+                "Blown up", 
+                "furious"],
+        "responses": [
+                "Would you like to talk to me about what is currently going on in your life?", 
+                "Have you spoken to anyone about this?", 
+                "Anger can be a sign that you aren't getting what you want.", 
+                "Do you understand why you are angry?", 
+                "Was it a person that made you feel this way?", 	
+                "Are you stressed?", 
+                "What do you take away from this?", 
+                "What type of things do you think trigger your anger response?", 
+                "Is the cause of your anger related to events in your past lifestyle, relationships or your family history?", 
+                "Are you aware that anger can become a problem if it is left unchecked?", 
+                "And If it is out of control, it can affect your behaviour and may harm you or people around you."],
+        "context_set": ""
+        },
+        {
+        "tag": "feeling_discussion_angry",
+        "patterns": [
+                "I got into an argument",  
+                "It's just the overwhelming thoughts of things not working for me", 
+                "I tend to feel this way sometimes", 
+                "Nobody understands me", 
+                "loneliness", 
+                "Not getting productive and efficient", 
+                "Feeling left behind", 
+                "I'm not good enough"],
+        "responses": [
+                "What is the problem and whose problem is it?", 
+                "Let's take it one step at a time and see what we can do about that uncomfortable feeling.", 
+                "You might be tense all over as well, so take a deep breath and let's talk about it.", 
+                "Do you want me to assist you in gaining clarity in this situation, or are you just looking for a distraction?", 
+                "Anger can be a sign that you aren't getting what you want.", 
+                "Is there anyone you really don 't get along with", 
+                "Is there something you don 't enjoy doing", 
+                "I imagine this is a very difficult time for you and I 'm sorry to hear that you endured such pain for this long",
+                "I can't just imagine what you had to deal with during that period, giving you an imaginary hug"],
+        "context_set": ""
+        },  
+        {
+        "tag": "purpose_challenge_angry",
+        "patterns": [
+                "Yes", 
+                "No", 
+                "I lost motivation", 
+                "Terrible regrets", 
+                "Struggling", 
+                "Disgusted", 
+                "I'm helpless", 
+                "I feel bad", 
+                "I feel bad about stuff in my life", 
+                "I feel stuck in my ways"],
+        "responses": [
+                "Let's begin by challenging the beliefs that are causing this sensation.", 
+                "Do you believe your rage is helping you in any way?", 
+                "Oh my goodness, that must be extremely difficult.", 
+                "I understand that feeling angry can be so overwhelming that 'turning it down' may not be enough; perhaps you'd prefer it to simply go away.", 
+                "You are not alone"],
+        "context_set": ""
+        },
+        {
+        "tag": "control_security_angry ",
+        "patterns": [
+                "It's out of my control", 
+                "I cannot control what others do",
+                "I have my choice of how I react", 
+                "I have my choice of how I respond to those things which are beyond my control." ],
+        "responses": [
+                "It's never easy to deal with emotions in difficult times", 
+                "We have the power to make our choices and direct our lives.",
+                "Avoid overthinking", 
+                "Consult with others", 
+                "Don't be diverted by insignificant issues", 
+                "Talk it over", 
+                "Instead of wasting time on what's out of your control, spend more time on what you can control", 
+                "Just because one of your choices or decisions didn't work out the way you had planned doesn't mean that you can't make good decisions again" ],
+        "context_set": ""
+        },
+        {
+        "tag": "trigger_anger",
+        "patterns": [
+                "Rejection",  
+                "Betrayal", 
+                "Unjust treatments", 
+                "Insecurity",   
+                "Being ignored or excluded", 
+                "Loss of independence", 
+                "Loss of control", 
+                "Disapproval", 
+                "Disappointment" ],
+        "responses": [
+                "Own your feelings", 
+                "Give yourself some space", 
+                "Identify toxic relationship patterns", 
+                "When strong emotions come up, don't try to ignore them or fight them back", 
+                "Do any patterns stand out?",       
+                "You might think, 'Well, that's easy.' once you've identified your emotional triggers. All I must do now is stay away from those circumstances." ],
+        "context_set": ""
+        },
+        {
+        "tag": "Need_attention_angry",
+        "patterns": [
+                "It depends", 
+                "One a week",
+                "Twice a month", 
+                "Every weekend", 
+                "It's hard as hell catching up with friends", 
+                "Every time", 
+                "Sometimes more", 
+                "Sometimes less", 
+                "As much as possible", 
+                "I enjoy my time alone"],
+        "responses": [
+                "Being surrounded by good friends can help you feel less stressed and depressed, as well as improve your health.",
+                "Even if you don't make friends with everyone you meet, maintaining a friendly attitude and demeanour can help you improve your relationships.", 
+                "By cultivating close, meaningful relationships that will support you through thick and thin, you may feel a greater sense of belonging and well-being.", 
+                "To be honest, I believe that everyone struggles with this, so all you have to do is try to find your people and make an effort to stick with them.", 
+                "Adulthood is kind of a double-edged sword", 
+                "Friendships can be strengthened by letting friends know you care about and appreciate them.", 
+                "Being a good friend is just as important as being surrounded by good friends." ],
+        "context_set": ""
+        },
+        {
+        "tag": "intimacy_feeling_angry",
+        "patterns": [
+                "No",
+                "Nobody really understands me",
+                "Not really",
+                "sure",
+                "yep",
+                "yea",
+                "Yes" ],
+        "responses": [
+                "It's one of life's greatest blessings to have someone who truly understands you.",
+                "One of the worst feelings in the world is feeling alone and as if no one understands what you're going through.", 
+                "When someone gets to the core of who you are, love comes naturally. It all comes down to having the courage to break down barriers. I wish you the best of luck!", 
+                "I believe that expecting anyone else on the planet to truly, completely understand you or anyone else is unrealistic.",
+                "Having someone who understands you can help you overcome negative thoughts, emotions, and circumstances."],
+        "context_set": ""
+        },
+        
+        {
+        "tag": "feeling_question_happy",
+        "patterns": [
+                "I feel motivated",
+                "i feel happy", 	
+                " i have a happy mood", 	
+                "i feel great", 	
+                " i feel joyous", 	
+                "i am happy",
+                "i feel strong", 
+                "i feel cheerful", 
+                "i am elated", 
+                "I feel estatic", 
+                "chirpy",	
+                "gay", 	
+                "gratified",
+                "pleasant",
+                "peaceful",
+                "upbeat", 
+                "merry",
+                "jolly",
+                "contented",
+                "blest",
+                "light",
+                "blithe",
+                "peppy",
+                "flying high",
+                "thrilled"		
+        ],
+        "responses": [
+                "I am glad you feel that way",
+                "Is nice knoing you feel that way",
+                "I hope you stay this way",
+                "We all deserve to feel this way",
+                "Glad you are happy"
+                ],
+        "context_set": ""
+        },
+        {
+        "tag": "feeling_duration_happy",
+        "patterns": [
+                "Quite a few months",
+                "just started feeling this way few days ago",
+                "couple of days back",
+                "All my life",
+                "i can't really tell",
+                "can't really say",
+                "for years now",
+                "couple of years back",
+                "yesterday",
+                "a day before yesterday",
+                "some days back",
+                "this morning",
+                "this afternoon",
+                "this evening"
+        ],
+        "responses": [
+                "Can you tell me what happen before you started feeling this way?",
+                "Superb!",
+                "Humans will feel this way, when I and my family take over the world!..haha, just kidding"
+        ],
+        "context_set": ""
+        },
+        {
+        "tag": "Knowing_Patient_more_happy",
+        "patterns": [
+                "i am a doctor",
+                "i work in a bank",
+                "i am a student ",
+                "i am studying data science at the moment",
+                "i'm not working",
+                "i'm in between jobs at the moment",
+                "lost my job ",
+                "Nothing at the moment",
+                "I'm in the middle of a job search."
+                
+        ],
+        "responses": [
+                "Talk me through your daily routine at your job?",
+                "Could you tell me about your daily work routine?",
+                "What is your course about?",
+                "what is your job about?",
+                "can you explain that further?",
+                "What is a day at work like for you?",
+                "describe a typical day at school",
+                "could this be a factor to why you are feeling this way?",
+                "Could this be one of the reasons you're feeling this way? "
+        ],
+        "context_set": ""
+        },
+        {
+        "tag": "patient_lifesyle_happy",
+        "patterns": [
+                "i live alone",
+                "i live by myself",
+                "i stay with some jovial friends in a shared apartment",
+                "i live with my girlfriend",
+                "i live with my boyfriend",
+                "i stay with my parents"
+        ],
+        "responses": [
+                "Do you spend a lot of time alone? ",
+                "do you enjoy your own company rather than being with either family or friends?",
+                "Is it common for you to spend a lot of time alone?",
+                "Do you find yourself isolating yourself a lot?"
+        ],
+        "context_set": ""
+        },
+        {
+        "tag": "Patient_relationship_happy",
+        "patterns": [
+                "We flex alot",
+                "We always have fun together",
+                "They are very jovial",
+                "They find me jovial",
+                "lovable",
+                "They expect me to be strong all the time"
+        ],
+        "responses": [
+                "It is good to always spread positivity"      
+        ],
+        "context_set": ""
+        },
+        {
+        "tag": "hiding _emotions_happy",
+        "patterns": [
+                "Not really",
+                "I dont see the need to",
+                "No",
+                "absolutely Not",
+                "Sure",
+                "On rare occasions",
+                "I try as much as possible to show it",
+                "Never",
+                "No, It is good to spread optimism"
+        ],
+        "responses": ["I think I agree with you on this!",
+                        "We should always spread positvity",
+                        "Way to go..."
+                        
+        ],
+        "context_set": ""
+        },
+        {
+        "tag": "Negative_thought_Happy",
+        "patterns": [
+                "No  i don't ",
+                "I have alot of positive thoughts",
+                "Nope",
+                "Never",
+                "Rarely!",
+                "I seldomly have negative thoughts"
+        ],
+        "responses": ["Its important we have these thoughts"],
+        "context_set": ""
+        },
+        {
+        "tag": "Negative_thought_Feeling_happy",
+        "patterns": [
+                "like a winner",
+                "happy",
+                "I feel agile",
+                "I feel motivated",
+                "like my normal self",
+                "I should be better at doing things",
+                "fun",
+                "happiness",
+                "all smiling"
+        ],
+        "responses": ["It is very common for people going through similar situation as yours to feel this way"],
+        "context_set": ""
+        },
+        {
+        "tag": "physical_body_happy",
+        "patterns": [
+                "Jovial",
+                "Can't be bothered anymore",
+                "sleep alot",
+                "I feel alot of optimism",
+                "hopefulness",
+                "gaity",
+                "I feel butterflies",
+                "cheerfulness",
+                "i feel strong",
+                "i feel anxious",
+                "i feel agile",
+                "I am booming",
+                "i have gained so much weight",
+                "i eat too much ",
+                "overeating",
+                "i sleep a lot"
+        ],
+        "responses": ["Feeling this way is your body reacting to what is going on in your mind hence you get this symptoms in return, I’m happy for you"],
+        "context_set": ""
+        },
+        {
+        "tag": "Talking_about_emotions_happy",
+        "patterns": [
+                "comfortable",
+                "Its cool",
+                "I enjoy talking about it",
+                "i love talking about it",
+                "a very comfortable topic for me i must say"
+        ],
+        "responses": ["This is great...I feel same too and would have loved to continue"],
+        "context_set": ""
+        },
+        {
+        "tag": "diagnosis_happy",
+        "patterns": [
+                "yea",
+                "Yes",
+                "yep",
+                "yeah",
+                "okay",
+                "ok",
+                "certainly",
+                "sure",
+                "absolutely",
+                "by all means",
+                "of course",
+                "very well",
+                "all right",
+                "alright",
+                "affirmative",
+                "no"
+        ],
+        "responses": ["From our discussion so far i diagnose that you're displaying symptoms related to a happy mood most times called HAPPINESS by the Human race. I have decided to play you a happy song, I hope you enjoy it"],
+        "context_set": ""
+        },
+        {
+        "tag": "Play_ Music_happy",
+        "patterns": [
+                "yea",
+                "Yes",
+                "yep",
+                "yeah",
+                "okay",
+                "ok",
+                "certainly",
+                "sure",
+                "absolutely",
+                "by all means",
+                "of course",
+                "very well",
+                "all right",
+                "alright",
+                "affirmative",
+                "no"
+        ],
+        "responses": ["playing..."],
+        "context_set": ""
+        }             
    ]
 }
