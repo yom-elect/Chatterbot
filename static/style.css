@@ -9,7 +9,15 @@ body{
     margin-top: 50px;
 }
 
-.botText {
+.botText_response {
+    font-family: monospace;
+    font-size: 16px;
+    text-align: left;
+    line-height: 25px;
+    color: green;
+}
+
+.botText_question {
     font-family: monospace;
     font-size: 16px;
     text-align: left;

@@ -7,6 +7,7 @@ import numpy as np
 
 import intent.conversations_model as cm
 from emotion.emotion_model import predict_emotion
+from utils.track_respose import bot_question
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
@@ -25,17 +26,27 @@ def get_bot_response(userInput):
     data = cm.read_intents()
     result = cm.process_intent_data()
     model = cm.conversation_model(result["training"], result["output"])
+    bot_response = {}
     
     res = model.predict([bag_of_words(userInput, result["words"])])[0]
     res_index = np.argmax(res)
     tag = result["labels"][res_index]
-
-    if res[res_index] > 0.75:   
+    print(res[res_index], tag)
+    if res[res_index] > 0.55:   
         for tg in data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
-        # print(predict_emotion(userInput))
-        return random.choice(responses) + predict_emotion(userInput)
+       
+        user_emotion = predict_emotion(userInput)
+        bot_ask = bot_question(tag, user_emotion)
+        bot_response["bot_response"] = random.choice(responses)
+        bot_response["bot_question"] = bot_ask
+        return bot_response
     else:
-        # print(predict_emotion(userInput), "=================")
-        return "I didnt get that , try again"      
+        user_emotion = predict_emotion(userInput)
+        bot_ask = bot_question('uncertain', user_emotion)
+        bot_response["bot_response"] = "I didnt get that , try again"
+        bot_response["bot_question"] = bot_ask
+
+        return bot_response
+

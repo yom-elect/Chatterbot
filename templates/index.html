@@ -12,7 +12,8 @@
     <h1>Dr Tim.AI</h1>
     <div>
         <div id="chatbox">
-            <p class="botText"><span>Hi there!</span></p>
+            <p class="botText_response"><span>Hi there!</span></p>
+            <p class="botText_question" hidden><span>How are you feeling?</span></p>
             <p class="userText" hidden><span>This paragraph should be hidden.</span></p>
         </div>
         <div id="userInput">
@@ -34,15 +35,26 @@
             $("#chatbox").append(userHTML);
             document.getElementById("userInput").scrollIntoView({block:'start', behaviour:'smooth'});
             $.get("/get", {userMessage: userText}).done((data) =>{
-                var botHTML = `<p class="botText">Bot: <span>${data}</span></p>`;
+                var botHTML = `<p class="botText_response">Bot: <span>${data.bot_response}</span></p>`;
                 $("#chatbox").append(botHTML);
                 if ('speechSynthesis' in window) {
                     let synth = window.speechSynthesis;
                     const voices = synth.getVoices();
-                    let msg = new SpeechSynthesisUtterance(data);
+                    let msg = new SpeechSynthesisUtterance(data.bot_response);
                     msg.voice = voices[1];
                     synth.speak(msg);
                 }
+                setTimeout(()=>{
+                    var botHTML2 = `<p class="botText_question">Bot: <span>${data.bot_question}</span></p>`;
+                    $("#chatbox").append(botHTML2);
+                    if ('speechSynthesis' in window) {
+                        let synth = window.speechSynthesis;
+                        const voices = synth.getVoices();
+                        let msg = new SpeechSynthesisUtterance(data.bot_question);
+                        msg.voice = voices[1];
+                        synth.speak(msg);
+                    }
+                }, 1000)
             })
         }
 

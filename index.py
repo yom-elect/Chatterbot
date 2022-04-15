@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, Response
+from flask import Flask, render_template, request
 from flask.helpers import safe_join
 
 from intent.model import get_bot_response
@@ -16,7 +16,7 @@ def main():
 @app.route("/get")
 def get_chatbot_response():
     userText = request.args.get('userMessage')
-    botResponse = str(get_bot_response(userText))
+    botResponse = get_bot_response(userText)
 
     return botResponse
     

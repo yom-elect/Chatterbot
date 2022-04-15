@@ -19,16 +19,6 @@
          "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
          "context_set": ""
         },
-        {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
-        },
-        {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
-         "context_set": ""
-        },
         {"tag": "feeling_question_sad",
         "patterns": ["I feel less moltivated to do things", "i feel exhausted"," i have a low mood", "i feel annoyed", " i feel pissed off", 	
                 "i am angry", "i feel hungry", "i feel afraid", " i am worried",  "i'm panicking", "i feel tired", "Unhappy", "sorrowful", 
