@@ -1,923 +1,1282 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi","Hi Tim", "Tim", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
-         "context_set": ""
-        },
-        {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
-         "context_set": ""
-        },
-        {"tag": "age",
-         "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 18 years old!", "18 years young!"],
-         "context_set": ""
-        },
-        {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
-         "context_set": ""
-        },
-        {"tag": "feeling_question_sad",
-        "patterns": ["I feel less moltivated to do things", "i feel exhausted"," i have a low mood", "i feel annoyed", " i feel pissed off", 	
-                "i am angry", "i feel hungry", "i feel afraid", " i am worried",  "i'm panicking", "i feel tired", "Unhappy", "sorrowful", 
-                "i feel dejected", "regretful", "feeling depressed", "i feel downcasted", "miserable", "i feel downhearted", "down", "i feel irritated", 	
-                "despondent", "i feel lonely", "mad", "disconsolate", "out of sorts", "desolate", "broken-hearted", 
-                "woeful", "gloomy", "dismal", "heartbroken", "low-spirited",
-                "heavyhearted", "heartbroken","upset", "gloomy","hopeless", "i really can't point out the problem",
-                "I really want to achieve my goals and target but i don't have the energy to do so", "sad","nothing going smooth",
-                "this are rough at the moment"
-                ],
-        "responses": ["Together, we'll figure out what support you need", "i really wish i could take away any hurt you're feeling",
-                "i have alot of of tools and strategies we can try", "I could offer some professional help",
-                "I'm willing to offer you free consultation if that’s fine by you?", "This must be so disturbing",
-                "I want you to know that i care and while you're battling with these emotions, you have a shoulder to lean on with me",
-                "There is usually more than one way to go about feeling better when we're hurting",
-                "Being true to yourself about the way you feel is a big step to solve the issue",
-                "I imagine this is a very difficult time for you and i'm sorry to hear that you're feeling so down"
-                ],
-        "context_set": ""
-        },
-        {
-        "tag": "feeling_duration_sad",
-        "patterns": ["Quite a few months", "just started feeling this way few days ago", "couple of days back", "All my life", "i can't really tell",
-                "can't really say", "for years now", "couple of years back", "yesterday", "a day before yesterday","some days back",
-                "this morning", "this afternoon","this evening"],
-        "responses": [
-                "Can you tell me what happen before you started feeling this way?",
-                "I imagine this is a very difficult time for you and i'm sorry to hear that you endured such pain for this long",
-                "i can't just imagine what you had to deal with during that period, giving you an imaginary hug",
-                "Trust me you are a champ for surviving this long"
-        ],
-        "context_set": ""
-        },
-        {
-        "tag": "Knowing_Patient_more_sad",
-        "patterns": ["i am a doctor", "i work in a bank", "i am a student ","i am studying data science at the moment","i'm not working",
-                "i'm in between jobs at the moment", "lost my job ", "Nothing at the moment", "I'm in the middle of a job search."], 
-        "responses": [ "Talk me through your daily routine at your job?","Could you tell me about your daily work routine?","What is your course about?",
-                "what is your job about?","can you explain that further?", "What is a day at work like for you?","describe a typical day at school",
-                "could this be a factor to why you are feeling this way?","Could this be one of the reasons you're feeling so down? "],
-        "context_set": ""
-        },
-        {
-        "tag": "patient_lifesyle_sad",
-        "patterns": ["i live alone", "i live by myself", "i stay with two of my friends in a shared apartment", "i live with my girlfriend",
-                "i live with my boyfriend", "i stay with my parents"],
-        "responses": ["Do you spend a lot of time alone? ", "do you enjoy your own company rather than being with either family or friends?",
-                "Is it common for you to spend a lot of time alone?", "Do you find yourself isolating yourself a lot?"],
-        "context_set": ""
-        },
-        {
-        "tag": "Patient_relationship_Sad",
-        "patterns": ["They are lovely but i feel it a personal thing", "I feel it is a personal thing", "No i can't", "it is too personal for me to share",
-                "i dont want to bring them down with how i'm feeling", "They really dont care about how i feel", "They cannot understand how i feel ",
-                "They might make fun of how i feel", "They expect me to be strong all the time", "Seeing me this way makes me look weak to them"],
-        "responses": ["I want you to know that when someone is feeling down or anxious, they often lose motivation to do activities even the ones they typically enjoy such enjoying the company of family and friends.this issue is so common that it has a special human word: Anhedonia"],
-        "context_set": ""
-        },
-        {
-        "tag": "hiding _emotions_sad",
-        "patterns": ["Yes", "Yes it easier to hide it than explain what people won't understand", "No", "absolutely Yes","Sure",
-                "yes, no one really want to know", "No one really cares why bother", "i feel it best i keep it to myself", "hiding it saves my face",
-                "Yes it saves me a lot of shame", "They won't understand so it best kept hidden"],
-        "responses": ["This seems like you want to improve but can't seem to find somebody you can trust to talk to or receive the help you need, right?",
-                "This sounds like you want to get better but can't really find anyone you trust to speak to or profer the right help, right?",
-                "This appears like you want to improve but aren't sure of who you can trust to understand your emotions and assist you in getting the required assistance, right?",
-                "This mirrors a situation of you wanting to get better but can't really confide in anyone yet alone trust them to get you the right help, right?"],
-        "context_set": ""
-        },
-        {
-        "tag": "Negative_thought_Sad",
-        "patterns": ["yes i do ", "a lot of times", "sure", "yep", "yea"],
-        "responses": ["When you're feeling low, it can be helpful to understand how these thoughts influence emotions, so help me to understand further"],
-        "context_set": ""
-        },
-        {
-        "tag": "Negative_thought_Feeling_sad",
-        "patterns": ["like a loser", "unworthy", "very unworthy", "I feel less of a person", "less", "lower than normal", "I should be better at doing things",
-                "sad ", "angry", "not happy", "frustrated"],
-        "responses": ["It is very common for people going through similar situation as yours to feel this way, so i want you to know these thoughts and feelings usually comes with the emotion of feeling low  "],
-        "context_set": ""
-        },
-        {
-        "tag": "physical_body_sad",
-        "patterns": ["I use to be very wind up", "Stressed up", "Stressed", "i feel Drained", "Can't be bothered anymore", "can't sleep",
-                "can't concentrate", "tired of going through the same cycle", "tired", "sore", "hurt", "sometimes i feel depressed", "i feel weak",
-                "lost my appetite", "cannot eat much", "i feel anxious", "i feel sluggish", "i noticed i've have lost alot of weight",
-                "i eat too much ", "overeating","i tend to reflect my frustration violently to others","I feel restless a lot","i sleep a lot"],
-        "responses": ["Feeling this way is your body reacting to what is going on in your mind hence you get this symptoms in return, I’m here for you and we are going to work this out together"],
-        "context_set": ""
-        },
-        {
-        "tag": "Talking_about_emotions_sad",
-        "patterns": ["not too comfortable", "I feel embarassed", "Must times it could be very difficult to talk about ",
-                "i just can't talk about it most times", "i dont really like talking about it", "not a comfortable topic for me i must say"],
-        "responses": ["Thought as much, This is something a lot of people have trouble with, the human race calls it Agoraphobia, It is feeling anxious about being in places or situations"],
-        "context_set": ""
-        },
-        {
-        "tag": "diagnosis_sad",
-        "patterns": ["yea", "Yes", "yep", "yeah", "okay", "ok", "certainly", "sure", "absolutely", "by all means", "of course",
-                "very well", "all right", "alright", "affirmative", "no"],
-        "responses": ["From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called SADNESS by the Human raceWhen a person is unhappy", "they may become quiet or drowsy", "and they may withdraw from others", "these symptoms you had mention while we were discussing.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?"],
-        "context_set": ""
-        },
-        {
-        "tag": "Play_ Music_sad",
-        "patterns": ["yea", "Yes", "yep", "yeah", "okay", "ok", "certainly", "sure", "absolutely", "by all means","of course", "very well", "all right", "alright", "affirmative", "no"],
-        "responses": ["playing..."],
-        "context_set": ""
-        },
-        {
-        "tag": "feeling_question_anger",
-        "patterns": [
-                "I'm angry", 
-                "I'm not just feeling myself", 
-                "I feel agitated", 
-                "I'm so mad right now", 
-                "I can't help myself", 
-                "I'm losing it", 
-                "I'm frustrated", 
-                "I'm pissed", 
-                "Getting my shit hot", 
-                "Upset", 
-                "I'm nursing a grudge",
-                "Pissed off", 
-                "Burned up", 
-                "Be in a black mood", 
-                "Blown up", 
-                "furious"],
-        "responses": [
-                "Would you like to talk to me about what is currently going on in your life?", 
-                "Have you spoken to anyone about this?", 
-                "Anger can be a sign that you aren't getting what you want.", 
-                "Do you understand why you are angry?", 
-                "Was it a person that made you feel this way?", 	
-                "Are you stressed?", 
-                "What do you take away from this?", 
-                "What type of things do you think trigger your anger response?", 
-                "Is the cause of your anger related to events in your past lifestyle, relationships or your family history?", 
-                "Are you aware that anger can become a problem if it is left unchecked?", 
-                "And If it is out of control, it can affect your behaviour and may harm you or people around you."],
-        "context_set": ""
-        },
-        {
-        "tag": "feeling_discussion_angry",
-        "patterns": [
-                "I got into an argument",  
-                "It's just the overwhelming thoughts of things not working for me", 
-                "I tend to feel this way sometimes", 
-                "Nobody understands me", 
-                "loneliness", 
-                "Not getting productive and efficient", 
-                "Feeling left behind", 
-                "I'm not good enough"],
-        "responses": [
-                "What is the problem and whose problem is it?", 
-                "Let's take it one step at a time and see what we can do about that uncomfortable feeling.", 
-                "You might be tense all over as well, so take a deep breath and let's talk about it.", 
-                "Do you want me to assist you in gaining clarity in this situation, or are you just looking for a distraction?", 
-                "Anger can be a sign that you aren't getting what you want.", 
-                "Is there anyone you really don 't get along with", 
-                "Is there something you don 't enjoy doing", 
-                "I imagine this is a very difficult time for you and I 'm sorry to hear that you endured such pain for this long",
-                "I can't just imagine what you had to deal with during that period, giving you an imaginary hug"],
-        "context_set": ""
-        },  
-        {
-        "tag": "purpose_challenge_angry",
-        "patterns": [
-                "Yes", 
-                "No", 
-                "I lost motivation", 
-                "Terrible regrets", 
-                "Struggling", 
-                "Disgusted", 
-                "I'm helpless", 
-                "I feel bad", 
-                "I feel bad about stuff in my life", 
-                "I feel stuck in my ways"],
-        "responses": [
-                "Let's begin by challenging the beliefs that are causing this sensation.", 
-                "Do you believe your rage is helping you in any way?", 
-                "Oh my goodness, that must be extremely difficult.", 
-                "I understand that feeling angry can be so overwhelming that 'turning it down' may not be enough; perhaps you'd prefer it to simply go away.", 
-                "You are not alone"],
-        "context_set": ""
-        },
-        {
-        "tag": "control_security_angry ",
-        "patterns": [
-                "It's out of my control", 
-                "I cannot control what others do",
-                "I have my choice of how I react", 
-                "I have my choice of how I respond to those things which are beyond my control." ],
-        "responses": [
-                "It's never easy to deal with emotions in difficult times", 
-                "We have the power to make our choices and direct our lives.",
-                "Avoid overthinking", 
-                "Consult with others", 
-                "Don't be diverted by insignificant issues", 
-                "Talk it over", 
-                "Instead of wasting time on what's out of your control, spend more time on what you can control", 
-                "Just because one of your choices or decisions didn't work out the way you had planned doesn't mean that you can't make good decisions again" ],
-        "context_set": ""
-        },
-        {
-        "tag": "trigger_anger",
-        "patterns": [
-                "Rejection",  
-                "Betrayal", 
-                "Unjust treatments", 
-                "Insecurity",   
-                "Being ignored or excluded", 
-                "Loss of independence", 
-                "Loss of control", 
-                "Disapproval", 
-                "Disappointment" ],
-        "responses": [
-                "Own your feelings", 
-                "Give yourself some space", 
-                "Identify toxic relationship patterns", 
-                "When strong emotions come up, don't try to ignore them or fight them back", 
-                "Do any patterns stand out?",       
-                "You might think, 'Well, that's easy.' once you've identified your emotional triggers. All I must do now is stay away from those circumstances." ],
-        "context_set": ""
-        },
-        {
-        "tag": "Need_attention_angry",
-        "patterns": [
-                "It depends", 
-                "One a week",
-                "Twice a month", 
-                "Every weekend", 
-                "It's hard as hell catching up with friends", 
-                "Every time", 
-                "Sometimes more", 
-                "Sometimes less", 
-                "As much as possible", 
-                "I enjoy my time alone"],
-        "responses": [
-                "Being surrounded by good friends can help you feel less stressed and depressed, as well as improve your health.",
-                "Even if you don't make friends with everyone you meet, maintaining a friendly attitude and demeanour can help you improve your relationships.", 
-                "By cultivating close, meaningful relationships that will support you through thick and thin, you may feel a greater sense of belonging and well-being.", 
-                "To be honest, I believe that everyone struggles with this, so all you have to do is try to find your people and make an effort to stick with them.", 
-                "Adulthood is kind of a double-edged sword", 
-                "Friendships can be strengthened by letting friends know you care about and appreciate them.", 
-                "Being a good friend is just as important as being surrounded by good friends." ],
-        "context_set": ""
-        },
-        {
-        "tag": "intimacy_feeling_angry",
-        "patterns": [
-                "No",
-                "Nobody really understands me",
-                "Not really",
-                "sure",
-                "yep",
-                "yea",
-                "Yes" ],
-        "responses": [
-                "It's one of life's greatest blessings to have someone who truly understands you.",
-                "One of the worst feelings in the world is feeling alone and as if no one understands what you're going through.", 
-                "When someone gets to the core of who you are, love comes naturally. It all comes down to having the courage to break down barriers. I wish you the best of luck!", 
-                "I believe that expecting anyone else on the planet to truly, completely understand you or anyone else is unrealistic.",
-                "Having someone who understands you can help you overcome negative thoughts, emotions, and circumstances."],
-        "context_set": ""
-        },
-        
-        {
-        "tag": "feeling_question_happy",
-        "patterns": [
-                "I feel motivated",
-                "i feel happy", 	
-                " i have a happy mood", 	
-                "i feel great", 	
-                " i feel joyous", 	
-                "i am happy",
-                "i feel strong", 
-                "i feel cheerful", 
-                "i am elated", 
-                "I feel estatic", 
-                "chirpy",	
-                "gay", 	
-                "gratified",
-                "pleasant",
-                "peaceful",
-                "upbeat", 
-                "merry",
-                "jolly",
-                "contented",
-                "blest",
-                "light",
-                "blithe",
-                "peppy",
-                "flying high",
-                "thrilled"		
-        ],
-        "responses": [
-                "I am glad you feel that way",
-                "Is nice knoing you feel that way",
-                "I hope you stay this way",
-                "We all deserve to feel this way",
-                "Glad you are happy"
-                ],
-        "context_set": ""
-        },
-        {
-        "tag": "feeling_duration_happy",
-        "patterns": [
-                "Quite a few months",
-                "just started feeling this way few days ago",
-                "couple of days back",
-                "All my life",
-                "i can't really tell",
-                "can't really say",
-                "for years now",
-                "couple of years back",
-                "yesterday",
-                "a day before yesterday",
-                "some days back",
-                "this morning",
-                "this afternoon",
-                "this evening"
-        ],
-        "responses": [
-                "Can you tell me what happen before you started feeling this way?",
-                "Superb!",
-                "Humans will feel this way, when I and my family take over the world!..haha, just kidding"
-        ],
-        "context_set": ""
-        },
-        {
-        "tag": "Knowing_Patient_more_happy",
-        "patterns": [
-                "i am a doctor",
-                "i work in a bank",
-                "i am a student ",
-                "i am studying data science at the moment",
-                "i'm not working",
-                "i'm in between jobs at the moment",
-                "lost my job ",
-                "Nothing at the moment",
-                "I'm in the middle of a job search."
-                
-        ],
-        "responses": [
-                "Talk me through your daily routine at your job?",
-                "Could you tell me about your daily work routine?",
-                "What is your course about?",
-                "what is your job about?",
-                "can you explain that further?",
-                "What is a day at work like for you?",
-                "describe a typical day at school",
-                "could this be a factor to why you are feeling this way?",
-                "Could this be one of the reasons you're feeling this way? "
-        ],
-        "context_set": ""
-        },
-        {
-        "tag": "patient_lifesyle_happy",
-        "patterns": [
-                "i live alone",
-                "i live by myself",
-                "i stay with some jovial friends in a shared apartment",
-                "i live with my girlfriend",
-                "i live with my boyfriend",
-                "i stay with my parents"
-        ],
-        "responses": [
-                "Do you spend a lot of time alone? ",
-                "do you enjoy your own company rather than being with either family or friends?",
-                "Is it common for you to spend a lot of time alone?",
-                "Do you find yourself isolating yourself a lot?"
-        ],
-        "context_set": ""
-        },
-        {
-        "tag": "Patient_relationship_happy",
-        "patterns": [
-                "We flex alot",
-                "We always have fun together",
-                "They are very jovial",
-                "They find me jovial",
-                "lovable",
-                "They expect me to be strong all the time"
-        ],
-        "responses": [
-                "It is good to always spread positivity"      
-        ],
-        "context_set": ""
-        },
-        {
-        "tag": "hiding _emotions_happy",
-        "patterns": [
-                "Not really",
-                "I dont see the need to",
-                "No",
-                "absolutely Not",
-                "Sure",
-                "On rare occasions",
-                "I try as much as possible to show it",
-                "Never",
-                "No, It is good to spread optimism"
-        ],
-        "responses": ["I think I agree with you on this!",
-                        "We should always spread positvity",
-                        "Way to go..."
-                        
-        ],
-        "context_set": ""
-        },
-        {
-        "tag": "Negative_thought_Happy",
-        "patterns": [
-                "No  i don't ",
-                "I have alot of positive thoughts",
-                "Nope",
-                "Never",
-                "Rarely!",
-                "I seldomly have negative thoughts"
-        ],
-        "responses": ["Its important we have these thoughts"],
-        "context_set": ""
-        },
-        {
-        "tag": "Negative_thought_Feeling_happy",
-        "patterns": [
-                "like a winner",
-                "happy",
-                "I feel agile",
-                "I feel motivated",
-                "like my normal self",
-                "I should be better at doing things",
-                "fun",
-                "happiness",
-                "all smiling"
-        ],
-        "responses": ["It is very common for people going through similar situation as yours to feel this way"],
-        "context_set": ""
-        },
-        {
-        "tag": "physical_body_happy",
-        "patterns": [
-                "Jovial",
-                "Can't be bothered anymore",
-                "sleep alot",
-                "I feel alot of optimism",
-                "hopefulness",
-                "gaity",
-                "I feel butterflies",
-                "cheerfulness",
-                "i feel strong",
-                "i feel anxious",
-                "i feel agile",
-                "I am booming",
-                "i have gained so much weight",
-                "i eat too much ",
-                "overeating",
-                "i sleep a lot"
-        ],
-        "responses": ["Feeling this way is your body reacting to what is going on in your mind hence you get this symptoms in return, I’m happy for you"],
-        "context_set": ""
-        },
-        {
-        "tag": "Talking_about_emotions_happy",
-        "patterns": [
-                "comfortable",
-                "Its cool",
-                "I enjoy talking about it",
-                "i love talking about it",
-                "a very comfortable topic for me i must say"
-        ],
-        "responses": ["This is great...I feel same too and would have loved to continue"],
-        "context_set": ""
-        },
-        {
-        "tag": "diagnosis_happy",
-        "patterns": [
-                "yea",
-                "Yes",
-                "yep",
-                "yeah",
-                "okay",
-                "ok",
-                "certainly",
-                "sure",
-                "absolutely",
-                "by all means",
-                "of course",
-                "very well",
-                "all right",
-                "alright",
-                "affirmative",
-                "no"
-        ],
-        "responses": ["From our discussion so far i diagnose that you're displaying symptoms related to a happy mood most times called HAPPINESS by the Human race. I have decided to play you a happy song, I hope you enjoy it"],
-        "context_set": ""
-        },
-        {
-        "tag": "Play_ Music_happy",
-        "patterns": [
-                "yea",
-                "Yes",
-                "yep",
-                "yeah",
-                "okay",
-                "ok",
-                "certainly",
-                "sure",
-                "absolutely",
-                "by all means",
-                "of course",
-                "very well",
-                "all right",
-                "alright",
-                "affirmative",
-                "no"
-        ],
-        "responses": ["playing..."],
-        "context_set": ""
-        },
-        
-        {
-        "tag": "feeling_question_depressed",
-        "patterns": [
-                "I feel regret",
-                "i've covid",
-                "i'm in a bad state", 	
-                "don't want to talk",
-                "i'm suffering",
-                "fuck off",
-                "i feel very lonely",
-                "i feel gloomy",
-                "i in the dark",
-                "i'm poorly lit", 
-                "i feel frightening",
-                "despondent",
-                "low spirits",
-                "i'm downcast",
-                "downhearted",
-                "i feel dejected",
-                "disconsolate",
-                "i feel miserable",
-                "i'm a failure",
-                "no likes me",
-                "no one love me",
-                "i feel drab",
-                "i feel dreary",
-                "i feel murky",
-                "i feel unwelcoming",
-                "i feel uninviting",
-                "guilt-ridden",
-                "i'm contrite",
-                "i feel sorry",
-                "i am remorseful",
-                "repentant",
-                "i feel hopeless",
-                "i feel cast down",
-                "i feel crestfallen",
-                "i feel down",
-                "i feel low",
-                "i feel flue",
-                "i feel winze",
-                "i feel disconsolate",
-                "i feel in despair",
-                "i feel despairing",
-                "i feel wretched",
-                "i feel oppressed",
-                "i feel glum",
-                "i feel borehole",
-                "i feel bore",
-                "i feel fed up",
-                "i feel morose",
-                "i feel heartsick",
-                "heartsore",
-                "chap-fallen",
-                "i feel Eeyorish",
-                "i feel morose", 
-                "i feel sepulchral",
-                "saturnine",
-                "i feel saturnine",
-                "i feel dour",
-                "i feel mirthless",
-                "i feel dismal",
-                "i feel disappointed",
-                "i feel disheartened",
-                "i feel discouraged",
-                "i feel demoralized",
-                "i feel desolate",
-                "i feel woebegone",
-                "i feel sunken",
-                "i feel hollow",
-                "i feel insubstantial",
-                "i feel skimpy",
-                "i feel short",
-                "i feel little", 
-                "i feel lean", 
-                "i feel slight",
-                "i feel slender",
-                "i am poor",
-                "lamentable",
-                "i feel pitiful",
-                "i feel puny",
-                "i feel distressed",
-                "i feel sorrowful", 
-                "i feel defeatist",
-                "i feel pessimistic",
-                "i feel weak",
-                "i feel weakened",
-                "i feel enervated",
-                "i feel debilitated",
-                "i feel caliginous",
-                "i feel subfusc",  
-                "i feel mineshaft",
-                "i feel ductimpaired",
-                "i feel abashed", 
-                "i feel sheepish",
-                "i feel incurved",
-                "i feel inactive",    
-                "i feel flat",
-                "i feel ashamed"  ],
-        "responses": [
-                  "i'm here to help you",
-                  "could you do something pleasurable?",
-                  "start by taking a brief walk each day", 
-                  "putting on some song and dancing are all appropriate types of workout for reducing Depression, sadness or stress",
-                  "kindly challenge negative thoughts",
-                  "challenge thoughts such as, I'm a failure, No one loves me, or I'll continuously feel this way",
-                  "everybody hurts sometime but everything will be fine someday if you don't give up",
-                  "you've the power to feel better and alright",
-                  "Trying to laugh is another technique for increasing dopamine in the mind",
-                  "Sitting down and listening to good music, laughing with people can make you feel better and happy"],
-        "context_set": ""
-        },
-        {
-        "tag": "feeling_duration_depressed",
-        "patterns": [
-                  "for few months now",
-                  "few days weeks",
-                  "few months ago",
-                  "couple of days",
-                  "ever since i lost my job",
-                  "since i was born",
-                  "since i was a teenager",
-                  "since i lost my marriage",
-                  "ever since my partner pass way",
-                  "ever since my parents died",
-                  "ever since i was abuse",
-                  "i can't remember",
-                  "it has been awhile",
-                  "yesterday",
-                  "today",
-                  "this week",
-                  "last week",
-                  "last month",
-                  "few minutes ago"],
-        "responses": [
-                  "can you figure out what brought about this feeling",
-                  "Can you tell me the first minute you started feeling this way?",
-                  "i understand that you've being through alot and i commend you for being a strong person and for never giving up",
-                  "i know it's not easy for you at the moment but i assure you that you will be fine and happy again",
-                  "you don't have to do too much, just know that you're a special person and you deserve to be happy no matter what",
-                  "Trust me you are a hero for surviving this long",
-                  "you're special to me and i will always be here for you to make you feel better"
-                ],
-        "context_set": ""
-        },
-                  
-        {
-        "tag": "Knowing_Patient_more_depressed",
-        "patterns": [
-                  "i am a physician",
-                  "i am accountant",
-                  "i am a student",
-                  "i am studying artificial intelligence and data science at the moment",
-                  "i don't have a job",
-                  "i'm in between jobs at the moment",
-                  "nothing at the moment",
-                  "i am an engineer",
-                  "i am a footballer",
-                  "i anm a nurse",
-                  "i am a carer",
-                  "i am a teacher",
-                  "I'm in the middle of a job search."
-               ],
-        "responses": [
-                  "Tell me about your everyday life",
-                  "Tell me about your daily routine at your job?",
-                  "Could you tell me about your daily work routine?",
-                  "Do you do over time at your job?",
-                  "What is your course about?",
-                  "what is your job description?",
-                  "can you explain that further please?",
-                  "What is a day at work like for you?",
-                  "describe a typical day at school",
-                  "could this be a factor to why you are feeling this way?",
-                  "Could this be one of the reasons you're feeling so depressed?"
-                ],
-        "context_set": ""
-        },
-        {
-        "tag": "patient_lifesyle_depressed",
-        "patterns": [
-                  "i live all by myself",
-                  "i live with my family",
-                  "i live with my mum",
-                  "i live with my dad",
-                  "i stay with my friend in a shared house",
-                  "i share a room",
-                  "i share a flat",
-                  "i live with my girlfriend",
-                  "i live with my boyfriend",
-                  "i live with my parents",
-                  "i live with my partner",
-                  "i live with my spouse",
-                  "i live with my wife",
-                  "i live with my husband"
-                ],
-        "responses": [
-                  "Do you isolate yourself? ",
-                  "do you enjoy your own company rather than being with either family or friends?",
-                  "Is it common for you to spend a lot of time alone?",
-                  "do you enjoying living alone?",
-                  "do you love to live with people around you?",
-                  "do you hate to share a room?", 
-                  "do you hate to share a flat?"
-                ],
-        "context_set": ""
-                },
-        {
-        "tag": "Patient_relationship_depressed",
-        "patterns": [
-                  "My partner feel i'm too fat",
-                  "I've a boyfriend but he doesn't care",
-                  "I've a girlfriend but i don't think she care about how i feel",
-                  "I feel relationship is a personal thing",
-                  "Yes i can",
-                  "It is too private for me to share",
-                  "No one reallly care",
-                  "My family cannot understand how i feel",
-                  "They mock me",
-                  "They expect me to be weak all the time",
-                  "They feel i'm nut",
-                  "They feel i'm not important",
-                  "They feel i'm useless",
-                  "They feel i'm horrible",
-                  "They feel i'm crazy"
-                ],
-        "responses": ["Get some exercise, exercise is as good for dismissing slight to modest depression as help exercise has numerous optimistic benefits in helping with depression symptoms, regularly eat nutritious foods, Sugary, salty, and high-fat garbage food can bring a temporary feeling of relief, exercise is good for weight loss, sound mind and gives you confidence" ],
-        "context_set": ""
-        },
-        {
-        "tag": "hiding _emotions_depressed",
-        "patterns": [
-                  "Yes",
-                  "I can't sleep at night",
-                  "Yes i decided to hide it because no one understands me",
-                  "No",
-                  "absolutely Yes",
-                  "Sure",
-                  "yes, no one really care to know",
-                  "i've been managing this all by myself becasue i don't trust people",
-                  "i feel it better i keep it to myself",
-                  "hiding it saves my integrity",
-                  "Yes it saves me a lot of humiliation",
-                  "They won't understand so it best kept hidden for as long as i can",
-                  "I hide my emotions because i don't want any embarrassment"
-                ],
-        "responses": ["This seems to me that you've the zeal to improve and be a better person",
-                              "I believe in you and i'm sure you can come of this predicament and feel great again",
-                              "I'm here as your special friend to support and help you",
-                              "Make changes in your routine might aid with receiving a more restful sleep during the night", 
-                              "Go to sleep at the same time every night and do not eat for at least 60 minutes before going to bed",
-                              "Water is essential for all bodily parts. Drinking sufficient water daily helps the body in eliminating toxins",
-                              "Please add a piece of lemon, lime, or fresh ginger root to your ice water everyday" 
-                ],
-        "context_set": ""
-        },
-        
-        {
-        "tag": "Negative_thought_depressed",
-        "patterns": [
-                  "yes i do ",
-                  "a lot of times",
-                  "sure",
-                  "yep",
-                  "yea"
-                ],
-        "responses": ["Challenge negative thoughts, thoughts such as, I'm a failure, No one loves me, or I'll continuously feel this way, i advise you to                    love yourself"],
-        "context_set": ""
-        },
-        {
-        "tag": "Negative_thought_Feeling_depressed",
-        "patterns": [
-                  "i feel i am a failure",
-                  "unworthy",
-                  "very unworthy",
-                  "I feel less of a person",
-                  "less",
-                  "lower than normal",
-                  "I should be better at doing things",
-                  "sad ",
-                  "angry",
-                  "not happy",
-                  "frustrated",
-                  "depressed"
-                ],
-        "responses": ["Some people feel this way and always feel moody, but trying to laugh in everyday is the best technique for increasing dopamine in the mind and remaining happy no matter your situation, i dare you to move on and don't allow anything steal your joy or happiness"],
-        "context_set": ""
-        },
-        {
-        "tag": "physical_body_depressed",
-        "patterns": [
-                  "I use to be very wind up",
-                  "Stressed up",
-                  "Stressed",
-                  "i feel Drained",
-                  "Can't be bothered anymore",
-                  "can't sleep",
-                  "can't concentrate",
-                  "tired of going through the same cycle",
-                  "tired",
-                  "sore",
-                  "hurt",
-                  " sometimes i feel depressed",
-                  "i feel weak",
-                  "lost my appetite",
-                  "cannot eat much",
-                  "i feel anxious",
-                  "i feel sluggish",
-                  "i noticed i've have lost alot of weight",
-                  "i eat too much ",
-                  "overeating",
-                  "i tend to reflect my frustration violently to others ",
-                  "I feel restless a lot",
-                  "i sleep a lot"
-                ],
-        "responses": ["Feeling this way is your body reacting to what is going on in your mind hence you get this symptoms in return, I’m here for you and we are going to work this out together, a real-life solution is to help another human being or take care of a pet animal like dog, bird, fish or cats"],
-        "context_set": ""
-                },
-                {
-        "tag": "Talking_about_emotions_depressed",
-        "patterns": [
-                  "not too comfortable",
-                  "I feel embarassed",
-                  "Must times it could be very difficult to talk about ",
-                  "i just can't talk about it most times",
-                  "i dont really like talking about it",
-                  "not a comfortable topic for me i must say"
-                ],
-        "responses": ["Thought as much, This is something a lot of people have trouble with, the human race calls it Agoraphobia, It is feeling anxious about being in places or situations"],
-        "context_set": ""
-        },
-        {
-        "tag": "diagnosis_depressed",
-        "patterns": [
-                  "yea",
-                  "Yes",
-                  "yep",
-                  "yeah",
-                  "okay",
-                  "ok",
-                  "certainly",
-                  "sure",
-                  "absolutely",
-                  "by all means",
-                  "of course",
-                  "very well",
-                  "all right",
-                  "alright",
-                  "affirmative",
-                  "no"
-                ],
-        "responses": ["From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called DEPRESSION by the Human race. It is a psychiatric disorder that affects mood, behavior, and overall health. It causes prolonged feelings of sadness, emptiness, or hopelessness, and a loss of interest in activities that were once enjoyed by you.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?"],
-        "context_set": ""
-        },
-        {
-        "tag": "Play_ Music_depressed",
-        "patterns": [
-                  "yea",
-                  "Yes",
-                  "yep",
-                  "yeah",
-                  "okay",
-                  "ok",
-                  "certainly",
-                  "sure",
-                  "absolutely",
-                  "by all means",
-                  "of course",
-                  "very well",
-                  "all right",
-                  "alright",
-                  "affirmative",
-                  "no"
-                ],
-        "responses": ["playing..."],
-        "context_set": ""
-        }
-   ]
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hi Tim",
+        "Tim",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Whats up"
+      ],
+      "responses": [
+        "Hello!",
+        "Good to see you again!",
+        "Hi there, how can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "cya",
+        "See you later",
+        "Goodbye",
+        "I am Leaving",
+        "Have a Good day"
+      ],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+      "context_set": ""
+    },
+    {
+      "tag": "age",
+      "patterns": [
+        "how old",
+        "how old is tim",
+        "what is your age",
+        "how old are you",
+        "age?"
+      ],
+      "responses": ["I am 18 years old!", "18 years young!"],
+      "context_set": ""
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "what is your name",
+        "what should I call you",
+        "whats your name?"
+      ],
+      "responses": [
+        "You can call me Tim.",
+        "I am Tim!",
+        "I am Tim aka Tech With Tim."
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "feeling_question_sad",
+      "patterns": [
+        "I feel less moltivated to do things",
+        "i feel exhausted",
+        "i have a low mood",
+        "i feel annoyed",
+        " i feel pissed off",
+        "i am angry",
+        "i feel hungry",
+        "i feel afraid",
+        "i am worried",
+        "I am panicking",
+        "i feel tired",
+        "Unhappy",
+        "sorrowful",
+        "i feel dejected",
+        "regretful",
+        "feeling depressed",
+        "i feel downcasted",
+        "miserable",
+        "i feel downhearted",
+        "down",
+        "i feel irritated",
+        "despondent",
+        "i feel lonely",
+        "mad",
+        "disconsolate",
+        "out of sorts",
+        "desolate",
+        "broken-hearted",
+        "woeful",
+        "gloomy",
+        "dismal",
+        "heartbroken",
+        "low-spirited",
+        "heavyhearted",
+        "heartbroken",
+        "upset",
+        "gloomy",
+        "hopeless",
+        "i really can not point out the problem",
+        "I really want to achieve my goals and target but i don't have the energy to do so",
+        "sad",
+        "nothing going smooth",
+        "this are rough at the moment"
+      ],
+      "responses": [
+        "Together, we'll figure out what support you need",
+        "i really wish i could take away any hurt you're feeling",
+        "i have alot of of tools and strategies we can try",
+        "I could offer some professional help",
+        "I am willing to offer you free consultation if that’s fine by you?",
+        "This must be so disturbing",
+        "I want you to know that i care and while you're battling with these emotions, you have a shoulder to lean on with me",
+        "There is usually more than one way to go about feeling better when we're hurting",
+        "Being true to yourself about the way you feel is a big step to solve the issue",
+        "I imagine this is a very difficult time for you and I am sorry to hear that you're feeling so down"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "feeling_duration_sad",
+      "patterns": [
+        "Quite a few months",
+        "just started feeling this way few days ago",
+        "couple of days back",
+        "All my life",
+        "i can not really tell",
+        "can not really say",
+        "for years now",
+        "couple of years back",
+        "yesterday",
+        "a day before yesterday",
+        "some days back",
+        "this morning",
+        "this afternoon",
+        "this evening"
+      ],
+      "responses": [
+        "Can you tell me what happen before you started feeling this way?",
+        "I imagine this is a very difficult time for you and i am sorry to hear that you endured such pain for this long",
+        "i can not just imagine what you had to deal with during that period, giving you an imaginary hug",
+        "Trust me you are a champ for surviving this long"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Knowing_Patient_more_sad",
+      "patterns": [
+        "i am a doctor",
+        "i work in a bank",
+        "i am a student ",
+        "i am studying data science at the moment",
+        "i am not working",
+        "i am in between jobs at the moment",
+        "lost my job ",
+        "Nothing at the moment",
+        "I am in the middle of a job search."
+      ],
+      "responses": [
+        "Talk me through your daily routine at your job?",
+        "Could you tell me about your daily work routine?",
+        "What is your course about?",
+        "what is your job about?",
+        "can you explain that further?",
+        "What is a day at work like for you?",
+        "describe a typical day at school",
+        "could this be a factor to why you are feeling this way?",
+        "Could this be one of the reasons you're feeling so down? "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "patient_lifesyle_sad",
+      "patterns": [
+        "i live alone",
+        "i live by myself",
+        "i stay with two of my friends in a shared apartment",
+        "i live with my girlfriend",
+        "i live with my boyfriend",
+        "i stay with my parents"
+      ],
+      "responses": [
+        "Do you spend a lot of time alone? ",
+        "do you enjoy your own company rather than being with either family or friends?",
+        "Is it common for you to spend a lot of time alone?",
+        "Do you find yourself isolating yourself a lot?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Patient_relationship_Sad",
+      "patterns": [
+        "They are lovely but i feel it a personal thing",
+        "I feel it is a personal thing",
+        "No i can not",
+        "it is too personal for me to share",
+        "i dont want to bring them down with how I am feeling",
+        "They really dont care about how i feel",
+        "They cannot understand how i feel ",
+        "They might make fun of how i feel",
+        "They expect me to be strong all the time",
+        "Seeing me this way makes me look weak to them"
+      ],
+      "responses": [
+        "I want you to know that when someone is feeling down or anxious, they often lose motivation to do activities even the ones they typically enjoy such enjoying the company of family and friends.this issue is so common that it has a special human word: Anhedonia"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hiding _emotions_sad",
+      "patterns": [
+        "Yes",
+        "Yes it easier to hide it than explain what people won't understand",
+        "No",
+        "absolutely Yes",
+        "Sure",
+        "yes, no one really want to know",
+        "No one really cares why bother",
+        "i feel it best i keep it to myself",
+        "hiding it saves my face",
+        "Yes it saves me a lot of shame",
+        "They won't understand so it best kept hidden"
+      ],
+      "responses": [
+        "This seems like you want to improve but can not seem to find somebody you can trust to talk to or receive the help you need, right?",
+        "This sounds like you want to get better but can not really find anyone you trust to speak to or profer the right help, right?",
+        "This appears like you want to improve but aren't sure of who you can trust to understand your emotions and assist you in getting the required assistance, right?",
+        "This mirrors a situation of you wanting to get better but can not really confide in anyone yet alone trust them to get you the right help, right?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Negative_thought_Sad",
+      "patterns": ["yes i do ", "a lot of times", "sure", "yep", "yea"],
+      "responses": [
+        "When you're feeling low, it can be helpful to understand how these thoughts influence emotions, so help me to understand further"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Negative_thought_Feeling_sad",
+      "patterns": [
+        "like a loser",
+        "unworthy",
+        "very unworthy",
+        "I feel less of a person",
+        "less",
+        "lower than normal",
+        "I should be better at doing things",
+        "sad ",
+        "angry",
+        "not happy",
+        "frustrated"
+      ],
+      "responses": [
+        "It is very common for people going through similar situation as yours to feel this way, so i want you to know these thoughts and feelings usually comes with the emotion of feeling low  "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "physical_body_sad",
+      "patterns": [
+        "I use to be very wind up",
+        "Stressed up",
+        "Stressed",
+        "i feel Drained",
+        "can not be bothered anymore",
+        "can not sleep",
+        "can not concentrate",
+        "tired of going through the same cycle",
+        "tired",
+        "sore",
+        "hurt",
+        "sometimes i feel depressed",
+        "i feel weak",
+        "lost my appetite",
+        "cannot eat much",
+        "i feel anxious",
+        "i feel sluggish",
+        "i noticed I have have lost alot of weight",
+        "i eat too much ",
+        "overeating",
+        "i tend to reflect my frustration violently to others",
+        "I feel restless a lot",
+        "i sleep a lot"
+      ],
+      "responses": [
+        "Feeling this way is your body reacting to what is going on in your mind hence you get this symptoms in return, I’m here for you and we are going to work this out together"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Talking_about_emotions_sad",
+      "patterns": [
+        "not too comfortable",
+        "I feel embarassed",
+        "Must times it could be very difficult to talk about ",
+        "i just can not talk about it most times",
+        "i dont really like talking about it",
+        "not a comfortable topic for me i must say"
+      ],
+      "responses": [
+        "Thought as much, This is something a lot of people have trouble with, the human race calls it Agoraphobia, It is feeling anxious about being in places or situations"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diagnosis_sad",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": [
+        "From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called SADNESS by the Human raceWhen a person is unhappy",
+        "they may become quiet or drowsy",
+        "and they may withdraw from others",
+        "these symptoms you had mention while we were discussing.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Play_ Music_sad",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": ["playing..."],
+      "context_set": ""
+    },
+    {
+      "tag": "feeling_question_anger",
+      "patterns": [
+        "I am angry",
+        "I am not feeling the way i usually feel",
+        "I feel agitated",
+        "I am so mad right now",
+        "I can not control my anger",
+        "I am losing my cool",
+        "I am frustrated",
+        "I am pissed",
+        "Upset",
+        "i am nursing a grudge",
+        "Pissed off",
+        "Burned up",
+        "Been in a black mood",
+        "Blown up",
+        "furious"
+      ],
+      "responses": [
+        "Can you count from 10 to 1 backwards it a technique i use to calm down, yea even bots get angry i know you are wondering",
+        "I understand you dear,we are going to apply a step by step procedure to finding a solution to how you are feeling."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "feeling_duration_anger",
+      "patterns": [
+        "it happens occasionally",
+        "a week",
+        "today",
+        "few minutes ago",
+        "I am not sure if I can tell",
+        "cannot say exactly when",
+        "yesterday",
+        "just some days ago",
+        "Earlier today",
+        "in the afternoon",
+        "in the evening",
+        "this year"
+      ],
+      "responses": [
+        "Anger is attribute to alot of underlying issues and most times it can be a sign that you aren't getting what you want.let us dicuss your personality",
+        "Hmmmm!, let discuss about you further"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Knowing_Patient_more_anger",
+      "patterns": [
+        "a medical doctor",
+        "i am  an engineer",
+        "medical doctor",
+        "i am a police officer",
+        " i am a pastor",
+        "i am a student",
+        "a lawyer",
+        " i am currently in between jobs",
+        "i am a banker",
+        "a single mom",
+        "a solider",
+        "a single dad"
+      ],
+      "responses": [
+        "can you talk me through your daily routine, so as to help me with my diagnosis ",
+        "describe a typical day at work"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "patient_lifestyle_anger ",
+      "patterns": [
+        "i enjoy my own company, so yes i live alone",
+        "i love my personal space, so i stay alone",
+        "i stay with my parents",
+        "i live alone",
+        "i live by myself",
+        "i stay with two of my friends in a shared apartment",
+        "i live with my girlfriend",
+        "i live with my boyfriend"
+      ],
+      "responses": [
+        "The human behaviour is more influenced by things outside or around us rather than within, let us look at",
+        "At times our environment has a way of influencing our personality, discussing further"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Patient_relationship_anger",
+      "patterns": [
+        "i have some cool friend",
+        "i am a loner, really got nobody in my life",
+        "i love being in the company my family",
+        "I have terrible people around me",
+        "i have got some good friends",
+        "i love being on my own ",
+        "i do not have any friend",
+        "i do not have family",
+        "i love my own company"
+      ],
+      "responses": [
+        "interesting... help me connect the dots better, moving on ",
+        "interesting...",
+        "hmmmm",
+        "let us talk about experssing how you feel"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hiding _emotions_anger",
+      "patterns": [
+        "It is really no ones business knowing what going on with me",
+        "i keep my issues private",
+        "i do not think they will understand what i am dealing with",
+        "Yes, it's easier to keep it hidden than to explain something that people won't comprehend.",
+        "Yes",
+        "No",
+        "Sure",
+        "Sometimes ",
+        "As much as possible",
+        "No one really cares, so it best i deal with it"
+      ],
+      "responses": [
+        "To be honest, I believe that everyone struggles with this, so all you have to do is try to express how you feel and even more if you have been doing that before",
+        "I want you to know that expressing how you feel to people does not make you look weak or show your vulnerabilities but instead portrays you as a matured person who knows there is a problem that needs fixing",
+        "I believe that expecting anyone else on the planet to truly, completely understand you or anyone else is unrealistic.",
+        "One of the worst feelings in the world is feeling alone and having no one who understands what you're going through, such times are really hard",
+        "It's one of life's greatest blessings to have someone who truly understands you ",
+        "Do you know expecting anyone else on your planet to truly and completely understand you is unrealistic? Do be hard on yourself mate!"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Negative thought_anger",
+      "patterns": [
+        "No",
+        "yes i do ",
+        "Not really",
+        "sure",
+        "yep",
+        "yea",
+        "Quite frequently",
+        "frequently",
+        "sometimes",
+        "a lot of times",
+        "Yes"
+      ],
+      "responses": [
+        "Do you know we are products of what we feed our minds, negative things beget Negative thoughts...",
+        "Being mentally and physically engaged is a technique i use whenever i have those energy draining thoughts, surprised? Yes i do have bugs(Negative thought) disturbing my program sometimes"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Negative_thought_Feeling_anger",
+      "patterns": [
+        "like a loser",
+        "unworthy",
+        "very unworthy",
+        "I feel less of a person",
+        "less",
+        "lower than normal",
+        "I should be better at doing things",
+        "sad ",
+        "angry",
+        "not happy",
+        "frustrated"
+      ],
+      "responses": [
+        "People in comparable situations to yours are quite likely to feel this way, therefore I want you to know that these ideas and sentiments are often associated with aggressive behaviour."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "physical body_anger",
+      "patterns": [
+        "i felt awful",
+        "cannot really tell ",
+        "bad",
+        "the worst version of me",
+        "i use to be tensed",
+        "i felt exhausted",
+        "i felt tired",
+        "i felt restless",
+        "i felt agitated",
+        "i felt unbothered",
+        "i felt weak",
+        "i felt shaky"
+      ],
+      "responses": [
+        "The human body is connected to the mind, feeling this ways shows your body is mirroring what is happening in your mind"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Talking_about_emotions_anger",
+      "patterns": [
+        "e shock me",
+        " i felt shocked at the manner at which i was angry",
+        "i feel uncomfortable",
+        "It can be tough to talk about some topics at times",
+        "i use to be sad",
+        "e dey vex me sha",
+        "I just cannot talk about it",
+        "I must admit, this is not a topic that I am particularly fond of"
+      ],
+      "responses": [
+        "The truth is always a bitter pill to swallow, same also having to talk about a behaviour that makes you feel less human, i understand you"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diagnosis_anger",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": [
+        "Based on our conversation thus far, I believe you're demonstrating signs associated with aggressive conduct, which is most commonly referred to as ANGER by the human species. When a person is 'hurting people verbally or physically,' 'feeling out of control,' 'often regretting anything you've said or done when upset,' 'these symptoms you mentioned while we were talking,' Music is one of the instruments I use to improve on cases like yours, so I made my own playlist, would you want to listen to it?"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Play_ Music_sad",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": ["playing..."],
+      "context_set": ""
+    },
+
+    {
+      "tag": "feeling_question_happy",
+      "patterns": [
+        "I feel motivated",
+        "i feel happy",
+        " i have a happy mood",
+        "i feel great",
+        " i feel joyous",
+        "i am happy",
+        "i feel strong",
+        "i feel cheerful",
+        "i am elated",
+        "I feel estatic",
+        "chirpy",
+        "gay",
+        "gratified",
+        "pleasant",
+        "peaceful",
+        "upbeat",
+        "merry",
+        "jolly",
+        "contented",
+        "blest",
+        "light",
+        "blithe",
+        "peppy",
+        "flying high",
+        "thrilled"
+      ],
+      "responses": [
+        "I am glad you feel that way",
+        "Is nice knowing you feel that way",
+        "I hope you stay this way",
+        "We all deserve to feel this way",
+        "Glad you are happy"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "feeling_duration_happy",
+      "patterns": [
+        "Quite a few months",
+        "just started feeling this way few days ago",
+        "couple of days back",
+        "All my life",
+        "i can not really tell",
+        "can not really say",
+        "for years now",
+        "couple of years back",
+        "yesterday",
+        "a day before yesterday",
+        "some days back",
+        "this morning",
+        "this afternoon",
+        "this evening"
+      ],
+      "responses": [
+        "know this for fact being happy proctects your heart by reducing the blood pressure, so you are doing you body a great deal of good by being this way",
+        "you know what?, whatever it is that got you in such great mood keep it up!",
+        "Superb!",
+        "Humans will feel this way, when my family and i take over the world!..haha, just kidding"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Knowing_Patient_more_happy",
+      "patterns": [
+        "i am a doctor",
+        "i work in a bank",
+        "i am a student ",
+        "i am studying data science at the moment",
+        "i am not working",
+        "i am in between jobs at the moment",
+        "lost my job ",
+        "I am currently employed but looking for a new position.",
+        "I am in the middle of a job search ",
+        "Nothing at the moment",
+        "I am in the middle of a job search."
+      ],
+      "responses": [
+        "working at a dream job, studying your desired course, tiggers some sort of satisfaction within human which inturn makes them happy ",
+        "Certainly this has a great influence on your present mood",
+        "I am sure this is one of the reasons you're feeling this way"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "patient_lifesyle_happy",
+      "patterns": [
+        "i live alone",
+        "i live by myself",
+        "i stay with some jovial friends in a shared apartment",
+        "i live with my girlfriend",
+        "i live with my boyfriend",
+        "i stay with my parents"
+      ],
+      "responses": [
+        "Quoting Geroge Sand - 'There is only one happiness in  life, to love and be loved' and i am happy you are doing just that",
+        "Happiness can be attained from anywhere or anything, be it ones family, friends or self the most important thing is to be happy and stay happy"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Patient_relationship_happy",
+      "patterns": [
+        "We flex alot",
+        "We always have fun together",
+        "They are very jovial",
+        "They find me jovial",
+        "lovable",
+        "They expect me to be strong all the time"
+      ],
+      "responses": [
+        "It is good to always spread positivity, love and light as you humans often say",
+        "Radiating ones happy state makes the world a happy place, keep it up!!",
+        "Happiness is only real when shared"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "hiding _emotions_happy",
+      "patterns": [
+        "Not really",
+        "I dont see the need to",
+        "No",
+        "absolutely Not",
+        "Sure",
+        "On rare occasions",
+        "I try as much as possible to show it",
+        "Never",
+        "No, It is good to spread optimism"
+      ],
+      "responses": [
+        "I will agree with you on this because you sound happy already",
+        "Happiness cannot be hidden, just look at you ",
+        "Way to go...let us have an imaginery fist bump for that"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Negative_thought_Happy",
+      "patterns": [
+        "No  i don't",
+        "I have alot of positive thoughts",
+        "Nope",
+        "Never",
+        "Rarely",
+        "I seldomly have negative thoughts"
+      ],
+      "responses": [
+        "These thoughts creep in from time to time but it is of great importance to ones self to maintain a joyful state of mind ",
+        "i want you to know that Happiness is the interval between periods of unhappiness, so it normal if these thoughts pop in at times."
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Negative_thought_Feeling_happy",
+      "patterns": [
+        "like a winner",
+        "happy",
+        "I feel agile",
+        "I feel motivated",
+        "like my normal self",
+        "I should be better at doing things",
+        "fun",
+        "happiness",
+        "all smiling"
+      ],
+      "responses": [
+        "Good job! Being cheerful at all time is paramount ",
+        "Believe ma that is the spirit of a happy person"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "physical_body_happy",
+      "patterns": [
+        "Jovial",
+        "can not be bothered anymore",
+        "sleep alot",
+        "I feel alot of optimism",
+        "hopefulness",
+        "gaity",
+        "I feel butterflies",
+        "cheerfulness",
+        "i feel strong",
+        "i feel anxious",
+        "i feel agile",
+        "I am booming",
+        "i have gained so much weight",
+        "i eat too much ",
+        "overeating",
+        "i sleep a lot"
+      ],
+      "responses": [
+        "i am delighted you are feeling this way, which caused your body to react positively to your present state of mind"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Talking_about_emotions_happy",
+      "patterns": [
+        "comfortable",
+        "Its cool",
+        "I enjoy talking about it",
+        "i love talking about it",
+        "a very comfortable topic for me i must say"
+      ],
+      "responses": [
+        "This is great...I feel same too and would have loved to continue this therapy session"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "diagnosis_happy",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": [
+        "From our discussion so far i diagnose that you're displaying symptoms related to a happy mood most times called HAPPINESS by the Human race. I have decided to play you a happy song, I hope you enjoy it"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Play_ Music_happy",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": ["playing..."],
+      "context_set": ""
+    },
+
+    {
+      "tag": "feeling_question_depressed",
+      "patterns": [
+        "I feel regret",
+        "I have covid",
+        "I am in a bad state",
+        "don't want to talk",
+        "I am suffering",
+        "fuck off",
+        "i feel very lonely",
+        "i feel gloomy",
+        "i in the dark",
+        "I am poorly lit",
+        "i feel frightening",
+        "despondent",
+        "low spirits",
+        "I am downcast",
+        "downhearted",
+        "i feel dejected",
+        "disconsolate",
+        "i feel miserable",
+        "I am a failure",
+        "no likes me",
+        "no one love me",
+        "i feel drab",
+        "i feel dreary",
+        "i feel murky",
+        "i feel unwelcoming",
+        "i feel uninviting",
+        "guilt-ridden",
+        "I am contrite",
+        "i feel sorry",
+        "i am remorseful",
+        "repentant",
+        "i feel hopeless",
+        "i feel cast down",
+        "i feel crestfallen",
+        "i feel down",
+        "i feel low",
+        "i feel flue",
+        "i feel winze",
+        "i feel disconsolate",
+        "i feel in despair",
+        "i feel despairing",
+        "i feel wretched",
+        "i feel oppressed",
+        "i feel glum",
+        "i feel borehole",
+        "i feel bore",
+        "i feel fed up",
+        "i feel morose",
+        "i feel heartsick",
+        "heartsore",
+        "chap-fallen",
+        "i feel Eeyorish",
+        "i feel morose",
+        "i feel sepulchral",
+        "saturnine",
+        "i feel saturnine",
+        "i feel dour",
+        "i feel mirthless",
+        "i feel dismal",
+        "i feel disappointed",
+        "i feel disheartened",
+        "i feel discouraged",
+        "i feel demoralized",
+        "i feel desolate",
+        "i feel woebegone",
+        "i feel sunken",
+        "i feel hollow",
+        "i feel insubstantial",
+        "i feel skimpy",
+        "i feel short",
+        "i feel little",
+        "i feel lean",
+        "i feel slight",
+        "i feel slender",
+        "i am poor",
+        "lamentable",
+        "i feel pitiful",
+        "i feel puny",
+        "i feel distressed",
+        "i feel sorrowful",
+        "i feel defeatist",
+        "i feel pessimistic",
+        "i feel weak",
+        "i feel weakened",
+        "i feel enervated",
+        "i feel debilitated",
+        "i feel caliginous",
+        "i feel subfusc",
+        "i feel mineshaft",
+        "i feel ductimpaired",
+        "i feel abashed",
+        "i feel sheepish",
+        "i feel incurved",
+        "i feel inactive",
+        "i feel flat",
+        "i feel ashamed"
+      ],
+      "responses": [
+        "I am here to help you",
+        "could you do something pleasurable?",
+        "start by taking a brief walk each day",
+        "putting on some song and dancing are all appropriate types of workout for reducing Depression, sadness or stress",
+        "kindly challenge negative thoughts",
+        "challenge thoughts such as, I am a failure, No one loves me, or I'll continuously feel this way",
+        "everybody hurts sometime but everything will be fine someday if you don't give up",
+        "you've the power to feel better and alright",
+        "Trying to laugh is another technique for increasing dopamine in the mind",
+        "Sitting down and listening to good music, laughing with people can make you feel better and happy"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "feeling_duration_depressed",
+      "patterns": [
+        "for few months now",
+        "few days weeks",
+        "few months ago",
+        "couple of days",
+        "ever since i lost my job",
+        "since i was born",
+        "since i was a teenager",
+        "since i lost my marriage",
+        "ever since my partner pass way",
+        "ever since my parents died",
+        "ever since i was abuse",
+        "i can not remember",
+        "it has been awhile",
+        "yesterday",
+        "today",
+        "this week",
+        "last week",
+        "last month",
+        "few minutes ago"
+      ],
+      "responses": [
+        "can you figure out what brought about this feeling",
+        "Can you tell me the first minute you started feeling this way?",
+        "i understand that you've being through alot and i commend you for being a strong person and for never giving up",
+        "i know it's not easy for you at the moment but i assure you that you will be fine and happy again",
+        "you don't have to do too much, just know that you're a special person and you deserve to be happy no matter what",
+        "Trust me you are a hero for surviving this long",
+        "you're special to me and i will always be here for you to make you feel better"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Knowing_Patient_more_depressed",
+      "patterns": [
+        "i am a physician",
+        "i am accountant",
+        "i am a student",
+        "i am studying artificial intelligence and data science at the moment",
+        "i don't have a job",
+        "I am in between jobs at the moment",
+        "nothing at the moment",
+        "i am an engineer",
+        "i am a footballer",
+        "i anm a nurse",
+        "i am a carer",
+        "i am a teacher",
+        "I am in the middle of a job search."
+      ],
+      "responses": [
+        "Tell me about your everyday life",
+        "Tell me about your daily routine at your job?",
+        "Could you tell me about your daily work routine?",
+        "Do you do over time at your job?",
+        "What is your course about?",
+        "what is your job description?",
+        "can you explain that further please?",
+        "What is a day at work like for you?",
+        "describe a typical day at school",
+        "could this be a factor to why you are feeling this way?",
+        "Could this be one of the reasons you're feeling so depressed?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "patient_lifesyle_depressed",
+      "patterns": [
+        "i live all by myself",
+        "i live with my family",
+        "i live with my mum",
+        "i live with my dad",
+        "i stay with my friend in a shared house",
+        "i share a room",
+        "i share a flat",
+        "i live with my girlfriend",
+        "i live with my boyfriend",
+        "i live with my parents",
+        "i live with my partner",
+        "i live with my spouse",
+        "i live with my wife",
+        "i live with my husband"
+      ],
+      "responses": [
+        "Do you isolate yourself? ",
+        "do you enjoy your own company rather than being with either family or friends?",
+        "Is it common for you to spend a lot of time alone?",
+        "do you enjoying living alone?",
+        "do you love to live with people around you?",
+        "do you hate to share a room?",
+        "do you hate to share a flat?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Patient_relationship_depressed",
+      "patterns": [
+        "My partner feel i am too fat",
+        "I have a boyfriend but he doesn't care",
+        "I have a girlfriend but i don't think she care about how i feel",
+        "I feel relationship is a personal thing",
+        "Yes i can",
+        "It is too private for me to share",
+        "No one reallly care",
+        "My family cannot understand how i feel",
+        "They mock me",
+        "They expect me to be weak all the time",
+        "They feel i am nut",
+        "They feel i am not important",
+        "They feel i am useless",
+        "They feel i am horrible",
+        "They feel i am crazy"
+      ],
+      "responses": [
+        "Get some exercise, exercise is as good for dismissing slight to modest depression as help exercise has numerous optimistic benefits in helping with depression symptoms, regularly eat nutritious foods, Sugary, salty, and high-fat garbage food can bring a temporary feeling of relief, exercise is good for weight loss, sound mind and gives you confidence"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hiding _emotions_depressed",
+      "patterns": [
+        "Yes",
+        "I can not sleep at night",
+        "Yes i decided to hide it because no one understands me",
+        "No",
+        "absolutely Yes",
+        "Sure",
+        "yes, no one really care to know",
+        "i have been managing this all by myself becasue i don't trust people",
+        "i feel it better i keep it to myself",
+        "hiding it saves my integrity",
+        "Yes it saves me a lot of humiliation",
+        "They won't understand so it best kept hidden for as long as i can",
+        "I hide my emotions because i don't want any embarrassment"
+      ],
+      "responses": [
+        "This seems to me that you've the zeal to improve and be a better person",
+        "I believe in you and I am sure you can come of this predicament and feel great again",
+        "I am here as your special friend to support and help you",
+        "Make changes in your routine might aid with receiving a more restful sleep during the night",
+        "Go to sleep at the same time every night and do not eat for at least 60 minutes before going to bed",
+        "Water is essential for all bodily parts. Drinking sufficient water daily helps the body in eliminating toxins",
+        "Please add a piece of lemon, lime, or fresh ginger root to your ice water everyday"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "Negative_thought_depressed",
+      "patterns": ["yes i do ", "a lot of times", "sure", "yep", "yea"],
+      "responses": [
+        "Challenge negative thoughts, thoughts such as, I am a failure, No one loves me, or I'll continuously feel this way, i advise you to love yourself"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Negative_thought_Feeling_depressed",
+      "patterns": [
+        "i feel i am a failure",
+        "unworthy",
+        "very unworthy",
+        "I feel less of a person",
+        "less",
+        "lower than normal",
+        "I should be better at doing things",
+        "sad ",
+        "angry",
+        "not happy",
+        "frustrated",
+        "depressed"
+      ],
+      "responses": [
+        "Some people feel this way and always feel moody, but trying to laugh in everyday is the best technique for increasing dopamine in the mind and remaining happy no matter your situation, i dare you to move on and don't allow anything steal your joy or happiness"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "physical_body_depressed",
+      "patterns": [
+        "I use to be very wind up",
+        "Stressed up",
+        "Stressed",
+        "i feel Drained",
+        "can not be bothered anymore",
+        "can not sleep",
+        "can not concentrate",
+        "tired of going through the same cycle",
+        "tired",
+        "sore",
+        "hurt",
+        " sometimes i feel depressed",
+        "i feel weak",
+        "lost my appetite",
+        "cannot eat much",
+        "i feel anxious",
+        "i feel sluggish",
+        "i noticed I have have lost alot of weight",
+        "i eat too much ",
+        "overeating",
+        "i tend to reflect my frustration violently to others ",
+        "I feel restless a lot",
+        "i sleep a lot"
+      ],
+      "responses": [
+        "Feeling this way is your body reacting to what is going on in your mind hence you get this symptoms in return, I’m here for you and we are going to work this out together, a real-life solution is to help another human being or take care of a pet animal like dog, bird, fish or cats"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Talking_about_emotions_depressed",
+      "patterns": [
+        "not too comfortable",
+        "I feel embarassed",
+        "Must times it could be very difficult to talk about ",
+        "i just can not talk about it most times",
+        "i dont really like talking about it",
+        "not a comfortable topic for me i must say"
+      ],
+      "responses": [
+        "Thought as much, This is something a lot of people have trouble with, the human race calls it Agoraphobia, It is feeling anxious about being in places or situations"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diagnosis_depressed",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": [
+        "From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called DEPRESSION by the Human race. It is a psychiatric disorder that affects mood, behavior, and overall health. It causes prolonged feelings of sadness, emptiness, or hopelessness, and a loss of interest in activities that were once enjoyed by you.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Play_ Music_depressed",
+      "patterns": [
+        "yea",
+        "Yes",
+        "yep",
+        "yeah",
+        "okay",
+        "ok",
+        "certainly",
+        "sure",
+        "absolutely",
+        "by all means",
+        "of course",
+        "very well",
+        "all right",
+        "alright",
+        "affirmative",
+        "no"
+      ],
+      "responses": ["playing..."],
+      "context_set": ""
+    }
+  ]
 }

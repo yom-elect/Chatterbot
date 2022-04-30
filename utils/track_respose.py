@@ -17,10 +17,10 @@ def bot_question(tag, emotion):
     if (result_index == 0):
         result.append(emotion)
         try:
-            return questions[result_index]["all"]
+            return questions[next_index]["all"]
         except:
             if (emotion == "neutral"): emotion = "joy"
-            return questions[result_index][emotion]
+            return questions[next_index][emotion]
     elif (result_index < 10):
         try:
             result.append(emotion)
