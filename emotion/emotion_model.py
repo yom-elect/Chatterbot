@@ -96,13 +96,20 @@ def get_linear_prediction_proba(model, docx):
 
 def best_prediction(userResponse):
     try:
-        pipe_lr = joblib.load("emotion/emotion_classifier_model_1.pkl")
-        nv_model = joblib.load("emotion/emotion_nv_classifier_model_1.pkl")
+        pipe_lr = train_emotion_model_logistic_reg()
+        nv_model = train_emotion_model_nv_model()
 
         if(get_linear_prediction_proba(pipe_lr, userResponse) >  get_nv_prediction_proba(nv_model, userResponse)):
             return predict_linear_emotions(pipe_lr, userResponse)
         else:
             return predict_nv_emotion(nv_model, userResponse)
+        # pipe_lr = joblib.load("emotion/emotion_classifier_model_1.pkl")
+        # nv_model = joblib.load("emotion/emotion_nv_classifier_model_1.pkl")
+
+        # if(get_linear_prediction_proba(pipe_lr, userResponse) >  get_nv_prediction_proba(nv_model, userResponse)):
+        #     return predict_linear_emotions(pipe_lr, userResponse)
+        # else:
+        #     return predict_nv_emotion(nv_model, userResponse)
     except:
         pipe_lr = train_emotion_model_logistic_reg()
         nv_model = train_emotion_model_nv_model()

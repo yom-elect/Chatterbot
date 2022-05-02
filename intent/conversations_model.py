@@ -79,9 +79,7 @@ def conversation_model(training, output):
 
     model = tflearn.DNN(net)
     try:
-        model.fit(training, output, n_epoch = 1000, batch_size = 8, show_metric= True)
-        model.save("intent/model.tflearn")
-        # model.load("intent/model.tflearn")
+        model.load("intent/model.tflearn")
     except:
         model.fit(training, output, n_epoch = 1000, batch_size = 8, show_metric= True)
         model.save("intent/model.tflearn")
