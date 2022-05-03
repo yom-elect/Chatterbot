@@ -32,7 +32,6 @@ def get_bot_response(userInput):
     res = model.predict([bag_of_words(userInput, result["words"])])[0]
     res_index = np.argmax(res)
     tag = result["labels"][res_index]
-    print(res[res_index], tag)
     if res[res_index] > 0.25:   
         for tg in data["intents"]:
             if tg['tag'] == tag:
