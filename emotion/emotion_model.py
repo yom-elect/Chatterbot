@@ -48,7 +48,7 @@ def process_dataset(type):
 def train_emotion_model_logistic_reg():
     x_train, _ , y_train, _ = process_dataset("logistic")
     # LogisticRegression Pipeline
-    pipe_lr = Pipeline(steps=[('cv',CountVectorizer()),('lr',LogisticRegression())])
+    pipe_lr = Pipeline(steps=[('cv',CountVectorizer()),('lr',LogisticRegression(solver='lbfgs', max_iter=3000))])
 
     # Train and Fit Data
     pipe_lr.fit(x_train,y_train)

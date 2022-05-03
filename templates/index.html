@@ -22,9 +22,7 @@
         </div>
     </div>
     <div id="video">
-        <iframe width="100%" height="415"
-            src="https://www.youtube.com/embed/jipQpjUA_o8?autoplay=1">
-        </iframe>
+        
     </div>
 
     <script>
@@ -44,17 +42,25 @@
                     msg.voice = voices[1];
                     synth.speak(msg);
                 }
-                setTimeout(()=>{
+                if (data.bot_question){
+                    setTimeout(()=>{
                     var botHTML2 = `<p class="botText_question">Bot: <span>${data.bot_question}</span></p>`;
                     $("#chatbox").append(botHTML2);
-                    if ('speechSynthesis' in window) {
-                        let synth = window.speechSynthesis;
-                        const voices = synth.getVoices();
-                        let msg = new SpeechSynthesisUtterance(data.bot_question);
-                        msg.voice = voices[1];
-                        synth.speak(msg);
-                    }
-                }, 1000)
+                        if ('speechSynthesis' in window) {
+                            let synth = window.speechSynthesis;
+                            const voices = synth.getVoices();
+                            let msg = new SpeechSynthesisUtterance(data.bot_question);
+                            msg.voice = voices[1];
+                            synth.speak(msg);
+                        }
+                    }, 1000)
+                }
+                if (data.play_video) {
+                    var playVideo = `<iframe width="100%" height="415"
+                                            src=${data.play_video}>
+                                    </iframe>`;
+                    $("#video").append(playVideo);
+                }
             })
         }
 

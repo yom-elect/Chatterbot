@@ -148,7 +148,8 @@
     {
       "tag": "Knowing_Patient_more_sad",
       "patterns": [
-        "i am a doctor",
+        "i am a Medical Doctor",
+        "I am a doctor", " i am a pastor", " i am currently in between jobs",
         "i work in a bank",
         "i am a student ",
         "i am studying data science at the moment",
@@ -307,7 +308,7 @@
       "context_set": ""
     },
     {
-      "tag": "diagnosis_sad",
+      "tag": "diagnosis",
       "patterns": [
         "yea",
         "Yes",
@@ -327,15 +328,14 @@
         "no"
       ],
       "responses": [
-        "From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called SADNESS by the Human raceWhen a person is unhappy",
-        "they may become quiet or drowsy",
-        "and they may withdraw from others",
-        "these symptoms you had mention while we were discussing.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?"
+        "From our discussion so far i diagnose that you're displaying symptoms related to a happy mood most times called HAPPINESS by the Human race. I have decided to play you a happy song, I hope you enjoy it",
+        "From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called SADNESS by the Human raceWhen a person is unhappy, they may become quiet or drowsy, and they may withdraw from others,these symptoms you had mention while we were discussing.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?",
+        "Based on our conversation thus far, I believe you're demonstrating signs associated with aggressive conduct, which is most commonly referred to as ANGER by the human species. When a person is 'hurting people verbally or physically,' 'feeling out of control,' 'often regretting anything you've said or done when upset,' 'these symptoms you mentioned while we were talking,' Music is one of the instruments I use to improve on cases like yours, so I made my own playlist, would you want to listen to it?"
       ],
       "context_set": ""
     },
     {
-      "tag": "Play_ Music_sad",
+      "tag": "Play_ Music",
       "patterns": [
         "yea",
         "Yes",
@@ -568,55 +568,6 @@
       ],
       "context_set": ""
     },
-    {
-      "tag": "diagnosis_anger",
-      "patterns": [
-        "yea",
-        "Yes",
-        "yep",
-        "yeah",
-        "okay",
-        "ok",
-        "certainly",
-        "sure",
-        "absolutely",
-        "by all means",
-        "of course",
-        "very well",
-        "all right",
-        "alright",
-        "affirmative",
-        "no"
-      ],
-      "responses": [
-        "Based on our conversation thus far, I believe you're demonstrating signs associated with aggressive conduct, which is most commonly referred to as ANGER by the human species. When a person is 'hurting people verbally or physically,' 'feeling out of control,' 'often regretting anything you've said or done when upset,' 'these symptoms you mentioned while we were talking,' Music is one of the instruments I use to improve on cases like yours, so I made my own playlist, would you want to listen to it?"
-      ],
-      "context_set": ""
-    },
-
-    {
-      "tag": "Play_ Music_sad",
-      "patterns": [
-        "yea",
-        "Yes",
-        "yep",
-        "yeah",
-        "okay",
-        "ok",
-        "certainly",
-        "sure",
-        "absolutely",
-        "by all means",
-        "of course",
-        "very well",
-        "all right",
-        "alright",
-        "affirmative",
-        "no"
-      ],
-      "responses": ["playing..."],
-      "context_set": ""
-    },
 
     {
       "tag": "feeling_question_happy",
@@ -838,56 +789,6 @@
       "responses": [
         "This is great...I feel same too and would have loved to continue this therapy session"
       ],
-      "context_set": ""
-    },
-
-    {
-      "tag": "diagnosis_happy",
-      "patterns": [
-        "yea",
-        "Yes",
-        "yep",
-        "yeah",
-        "okay",
-        "ok",
-        "certainly",
-        "sure",
-        "absolutely",
-        "by all means",
-        "of course",
-        "very well",
-        "all right",
-        "alright",
-        "affirmative",
-        "no"
-      ],
-      "responses": [
-        "From our discussion so far i diagnose that you're displaying symptoms related to a happy mood most times called HAPPINESS by the Human race. I have decided to play you a happy song, I hope you enjoy it"
-      ],
-      "context_set": ""
-    },
-
-    {
-      "tag": "Play_ Music_happy",
-      "patterns": [
-        "yea",
-        "Yes",
-        "yep",
-        "yeah",
-        "okay",
-        "ok",
-        "certainly",
-        "sure",
-        "absolutely",
-        "by all means",
-        "of course",
-        "very well",
-        "all right",
-        "alright",
-        "affirmative",
-        "no"
-      ],
-      "responses": ["playing..."],
       "context_set": ""
     },
 
@@ -1228,54 +1129,6 @@
       "responses": [
         "Thought as much, This is something a lot of people have trouble with, the human race calls it Agoraphobia, It is feeling anxious about being in places or situations"
       ],
-      "context_set": ""
-    },
-    {
-      "tag": "diagnosis_depressed",
-      "patterns": [
-        "yea",
-        "Yes",
-        "yep",
-        "yeah",
-        "okay",
-        "ok",
-        "certainly",
-        "sure",
-        "absolutely",
-        "by all means",
-        "of course",
-        "very well",
-        "all right",
-        "alright",
-        "affirmative",
-        "no"
-      ],
-      "responses": [
-        "From our discussion so far i diagnose that you're displaying symptoms related to a low mood most times called DEPRESSION by the Human race. It is a psychiatric disorder that affects mood, behavior, and overall health. It causes prolonged feelings of sadness, emptiness, or hopelessness, and a loss of interest in activities that were once enjoyed by you.Music is one of the tools i use while working to get better on cases like yours, so like you humans i created a playlist of my own 😎, would you like to listen to it?"
-      ],
-      "context_set": ""
-    },
-    {
-      "tag": "Play_ Music_depressed",
-      "patterns": [
-        "yea",
-        "Yes",
-        "yep",
-        "yeah",
-        "okay",
-        "ok",
-        "certainly",
-        "sure",
-        "absolutely",
-        "by all means",
-        "of course",
-        "very well",
-        "all right",
-        "alright",
-        "affirmative",
-        "no"
-      ],
-      "responses": ["playing..."],
       "context_set": ""
     }
   ]

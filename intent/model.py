@@ -1,4 +1,5 @@
 import random
+from re import search
 import nltk
 nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
@@ -39,8 +40,19 @@ def get_bot_response(userInput):
        
         user_emotion = predict_emotion(userInput)
         bot_ask = bot_question(tag, user_emotion)
-        bot_response["bot_response"] = random.choice(responses)
-        bot_response["bot_question"] = bot_ask
+        if (tag == "diagnosis"):
+            if(user_emotion == "joy" or user_emotion == "neutral" or user_emotion == "surprise"):
+                bot_response["bot_response"] = responses[0]
+            elif (user_emotion == "sadness" or user_emotion == "shame"):
+                bot_response["bot_response"] = responses[1]
+            else:
+                bot_response["bot_response"] = responses[2]
+        else:
+            bot_response["bot_response"] = random.choice(responses)
+        if search('https', bot_ask):
+            bot_response["play_video"] = bot_ask
+        else:
+            bot_response["bot_question"] = bot_ask
         return bot_response
     else:
         user_emotion = predict_emotion(userInput)

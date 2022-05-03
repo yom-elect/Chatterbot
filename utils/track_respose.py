@@ -1,3 +1,5 @@
+import csv
+import random
 from utils.questions_bank import questions
 
 result = []
@@ -7,27 +9,52 @@ def bot_question(tag, emotion):
     result_index = len(result)
     next_index = result_index + 1
 
+    print(result, "emotion store")
+
     if(tag in asides):
         try:
             return questions[result_index]["all"]
         except:
-            if (emotion == "neutral"): emotion = "joy"
-            return questions[result_index][emotion]       
+            valid_emotion = validate_emotion(emotion)
+            return questions[result_index][valid_emotion]       
 
     if (result_index == 0):
-        result.append(emotion)
+        norm_emotion = normalize_emotion(emotion)
+        result.append(norm_emotion)
         try:
             return questions[next_index]["all"]
         except:
-            if (emotion == "neutral"): emotion = "joy"
-            return questions[next_index][emotion]
+            valid_emotion = validate_emotion(emotion)
+            return questions[next_index][valid_emotion]
     elif (result_index < 10):
         try:
-            result.append(emotion)
+            norm_emotion = normalize_emotion(emotion)
+            result.append(norm_emotion)
             return questions[next_index]["all"]
         except:
-            result.append(emotion)
-            if (emotion == "neutral"): emotion = "joy"
-            return questions[next_index][emotion]   
-    elif (result_index >= 10):
-        return "music time"
+            norm_emotion = normalize_emotion(emotion)
+            result.append(norm_emotion)
+            valid_emotion = validate_emotion(emotion)
+            return questions[next_index][valid_emotion]  
+    elif (result_index >= 9 or tag == "Play_ Music"):
+        emotion_songs = []
+        emotion_stat = round(sum(result) / len(result))
+        with open("music/Music_score.csv") as file:
+            csv_reader = csv.reader(file)
+            for music in csv_reader:
+                if (music[2] == emotion_stat):
+                    emotion_songs.append(music[1])
+        return random.choice(emotion_songs)
+
+def normalize_emotion(emotion):
+    if (emotion == 'joy'): return 5
+    if (emotion == 'neutral'): return 3
+    if (emotion == 'depressed'): return 4
+    if (emotion == 'sadness'): return 2
+    if (emotion == 'anger'): return 1
+
+def validate_emotion(emotion):
+    if (emotion == "neutral" or emotion == "surprise"): emotion = "joy"
+    if (emotion == "shame"): emotion = "sadness"
+    if (emotion == "disgust"): emotion = "anger"
+    return emotion
