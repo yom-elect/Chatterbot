@@ -39,11 +39,11 @@ def get_bot_response(userInput):
                 responses = tg['responses']
        
         user_emotion = predict_emotion(userInput)
-        bot_ask = bot_question(tag, user_emotion)
+        (bot_ask, stat) = bot_question(tag, user_emotion)
         if (tag == "diagnosis"):
-            if(user_emotion == "joy" or user_emotion == "neutral" or user_emotion == "surprise"):
+            if (stat == 5 or stat == 3):
                 bot_response["bot_response"] = responses[0]
-            elif (user_emotion == "sadness" or user_emotion == "shame"):
+            elif (stat == 2 or stat == 4):
                 bot_response["bot_response"] = responses[1]
             else:
                 bot_response["bot_response"] = responses[2]

@@ -11,29 +11,33 @@ def bot_question(tag, emotion):
 
     if(tag in asides):
         try:
-            return questions[result_index]["all"]
+            return (questions[result_index]["all"], 0)
         except:
             valid_emotion = validate_emotion(emotion)
-            return questions[result_index][valid_emotion]       
+            return (questions[result_index][valid_emotion], 0)       
 
     if (result_index == 0):
         norm_emotion = normalize_emotion(emotion)
         result.append(norm_emotion)
         try:
-            return questions[next_index]["all"]
+            emotion_stat = round(sum(result) / len(result))
+            return (questions[next_index]["all"], emotion_stat)
         except:
             valid_emotion = validate_emotion(emotion)
-            return questions[next_index][valid_emotion]
+            emotion_stat = round(sum(result) / len(result))
+            return (questions[next_index][valid_emotion], emotion_stat)
     elif (result_index < 10):
         try:
             norm_emotion = normalize_emotion(emotion)
             result.append(norm_emotion)
-            return questions[next_index]["all"]
+            emotion_stat = round(sum(result) / len(result))
+            return (questions[next_index]["all"], emotion_stat)
         except:
             norm_emotion = normalize_emotion(emotion)
             result.append(norm_emotion)
             valid_emotion = validate_emotion(emotion)
-            return questions[next_index][valid_emotion]  
+            emotion_stat = round(sum(result) / len(result))
+            return (questions[next_index][valid_emotion], emotion_stat)  
     elif (result_index >= 9 or tag == "Play_ Music"):
         emotion_songs = []
         emotion_stat = round(sum(result) / len(result))
@@ -43,7 +47,7 @@ def bot_question(tag, emotion):
             for music in csv_reader:
                 if (int(music[2]) == emotion_stat):
                     emotion_songs.append(music[1])
-        return random.choice(emotion_songs)
+        return (random.choice(emotion_songs), emotion_stat)
 
 def normalize_emotion(emotion):
     if (emotion == 'joy'): return 5
