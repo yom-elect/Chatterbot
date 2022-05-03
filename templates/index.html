@@ -56,6 +56,7 @@
                     }, 1000)
                 }
                 if (data.play_video) {
+                    document.getElementById("video").scrollIntoView({block:'start', behaviour:'smooth'});
                     var playVideo = `<iframe width="100%" height="415"
                                             src=${data.play_video}>
                                     </iframe>`;

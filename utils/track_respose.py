@@ -9,8 +9,6 @@ def bot_question(tag, emotion):
     result_index = len(result)
     next_index = result_index + 1
 
-    print(result, "emotion store")
-
     if(tag in asides):
         try:
             return questions[result_index]["all"]
@@ -41,8 +39,9 @@ def bot_question(tag, emotion):
         emotion_stat = round(sum(result) / len(result))
         with open("music/Music_score.csv") as file:
             csv_reader = csv.reader(file)
+            headings =next(csv_reader)
             for music in csv_reader:
-                if (music[2] == emotion_stat):
+                if (int(music[2]) == emotion_stat):
                     emotion_songs.append(music[1])
         return random.choice(emotion_songs)
 
