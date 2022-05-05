@@ -50,6 +50,6 @@ questions = [
     },
     {
         "type": "play_ music",
-        "all" : " Do you want me to play me playlist for you?"
+        "all" : " Do you want me to play my playlist for you?"
     }
 ]
