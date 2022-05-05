@@ -1,0 +1,20 @@
+### RUNNING PROJECT....
+
+- 1. INSTALL DEPENDENCIES
+	a. pip install flask
+	b. pip install pyopenssl
+	c. pip install pandas
+	d. pip install unittest
+	e. pip install numpy
+    f. pip install neattext
+	g. pip install joblib
+	h. pip install sklearn
+	i. pip install nltk
+	j. pip install tflearn
+	k. pip install tensorflow
+	l. pip install pickle
+
+-  2.  RUN APPLICATION
+	python index.py 
+
+-  3. VISIT https://localhost:5000/ to test app
