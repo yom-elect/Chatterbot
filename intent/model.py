@@ -24,7 +24,7 @@ def bag_of_words(s, words):
     return np.array(bag)
 
 def get_bot_response(userInput):
-    data = cm.read_intents()
+    data = cm.read_intents() #get intents
     result = cm.process_intent_data()
     model = cm.conversation_model(result["training"], result["output"])
     bot_response = {}

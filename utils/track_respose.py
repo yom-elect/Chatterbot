@@ -4,10 +4,17 @@ from utils.questions_bank import questions
 
 result = []
 
+def reset_state():
+    return result.clear()
+
 def bot_question(tag, emotion):
     asides= ["greeting","goodbye","age","name", 'uncertain']
     result_index = len(result)
     next_index = result_index + 1
+
+
+    if tag == 'goodbye':
+        reset_state()
 
     if(tag in asides):
         try:

@@ -22,6 +22,7 @@ def get_chatbot_response():
     
 
 if __name__ == "__main__":
-    app.run(ssl_context='adhoc')
+    app.run(debug=True)
+    #app.run(ssl_context='adhoc')
 
 # print("Start talking with the bot! type quit to stop")
